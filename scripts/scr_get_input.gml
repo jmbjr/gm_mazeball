@@ -1,6 +1,4 @@
 /// scr_get_input
-
-walking_speed = 2;
 right_key = (keyboard_check(vk_right) || keyboard_check(ord('D')));
 left_key  = (keyboard_check(vk_left)  || keyboard_check(ord('A')));
 up_key    = (keyboard_check(vk_up)    || keyboard_check(ord('W')));
