@@ -28,10 +28,16 @@
             <string>/// create
 scr_get_input();
 walking_speed = 2;
+state = scr_move_state;
+hspd = 0;
+vspd = 0;
+len = 0;
+animation_speed = 0.2;
+
 phy_fixed_rotation = true;
 image_speed = 0;
-state = scr_move_state;
-
+sprite_index = spr_player_down;
+ 
 </string>
           </argument>
         </arguments>
