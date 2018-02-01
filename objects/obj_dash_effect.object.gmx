@@ -56,12 +56,14 @@ image_alpha = 0.5;
 // if not invis
 if image_alpha &gt; 0
 {
-  image_alpha -= 0.1;
+    image_alpha -= 0.1
+    image_alpha = max(0, image_alpha);
 }
 else
 {
     instance_destroy();
 }
+
 </string>
           </argument>
         </arguments>
