@@ -31,6 +31,8 @@ walking_speed = 2;
 state = scr_move_state;
 hspd = 0;
 vspd = 0;
+xaxis = 0;
+yaxis = 0;
 len = 0;
 animation_speed = 0.2;
 

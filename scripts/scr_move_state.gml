@@ -1,9 +1,6 @@
 /// scr_move_state
 scr_get_input();
 
-// get axes
-var xaxis = (right_key - left_key);
-var yaxis = (down_key - up_key);
 var dir = point_direction(0, 0, xaxis, yaxis);
 
 if (xaxis == 0 && yaxis == 0) 
