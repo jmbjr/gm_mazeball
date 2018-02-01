@@ -21,7 +21,7 @@
   <scripts name="scripts">
     <script>scripts\scr_get_input.gml</script>
     <script>scripts\scr_move_state.gml</script>
-    <script>scripts\script4.gml</script>
+    <script>scripts\scr_dash_state.gml</script>
     <script>scripts\scr_frozen_state.gml</script>
     <script>scripts\scr_thaw_state.gml</script>
   </scripts>
@@ -29,6 +29,7 @@
     <object>objects\obj_player</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_view</object>
+    <object>objects\obj_dash_effect</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start</room>

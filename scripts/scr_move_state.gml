@@ -1,7 +1,7 @@
 /// scr_move_state
 scr_get_input();
 
-var dir = point_direction(0, 0, xaxis, yaxis);
+dir = point_direction(0, 0, xaxis, yaxis);
 
 if (xaxis == 0 && yaxis == 0) 
 {
@@ -13,6 +13,12 @@ if (xaxis == 0 && yaxis == 0)
 else
 {
 // actually moving
+    if (dash_key)
+    {
+        state = scr_dash_state;
+        alarm[0] = dur_dash;
+    }
+     
     hspd = lengthdir_x(walking_speed, dir);
     vspd = lengthdir_y(walking_speed, dir);
     image_speed = animation_speed;
