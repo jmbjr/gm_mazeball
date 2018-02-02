@@ -182,6 +182,7 @@ view_yview=clamp(view_yview,0,room_height-view_hview);
           <argument>
             <kind>1</kind>
             <string>/// HUD
+draw_set_font(fnt_basic);
 draw_set_color(c_white);
 draw_set_valign(fa_middle);
 draw_set_halign(fa_left);

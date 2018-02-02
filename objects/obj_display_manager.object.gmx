@@ -178,6 +178,7 @@ if (keyboard_check_pressed(ord("V")))
             <kind>1</kind>
             <string>/// draw gui
 
+draw_set_font(fnt_basic);
 draw_set_color(c_white);
 draw_set_valign(fa_left);
 draw_set_halign(fa_top);
