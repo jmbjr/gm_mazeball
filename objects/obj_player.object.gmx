@@ -31,6 +31,9 @@ walking_speed = 2;
 dash_speed = walking_speed * 4;
 dur_dash = room_speed / 4;
 
+view_zoom = 1;
+view_max_zoom = 10;
+
 state = scr_move_state;
 hspd = 0;
 vspd = 0;
@@ -93,6 +96,45 @@ state = scr_move_state;
             <string>/// Move player via step events
 
 script_execute(state);
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// view following
+
+var zoom_speed = 0.1;
+view_zoom += keyboard_check(ord("Q"))*zoom_speed;
+view_zoom -= keyboard_check(ord("E"))*zoom_speed;
+view_zoom = clamp(view_zoom, 1, view_max_zoom);
+
+view_wview = obj_display_manager.ideal_width / view_zoom;
+view_hview = obj_display_manager.ideal_height / view_zoom;
+
+//Center on player
+view_xview=x-view_wview/2;
+view_yview=y-view_hview/2;
+
+//clamp to room
+view_xview=clamp(view_xview,0,room_width-view_wview);
+view_yview=clamp(view_yview,0,room_height-view_hview);
+
+
 </string>
           </argument>
         </arguments>

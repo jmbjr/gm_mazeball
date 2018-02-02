@@ -24,6 +24,7 @@
     <script>scripts\scr_dash_state.gml</script>
     <script>scripts\scr_frozen_state.gml</script>
     <script>scripts\scr_thaw_state.gml</script>
+    <script>scripts\display_write_specs.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
@@ -32,6 +33,7 @@
     <object>objects\obj_display_manager</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\_init_display</room>
     <room>rooms\rm_start</room>
   </rooms>
   <help>
