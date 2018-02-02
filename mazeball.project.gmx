@@ -28,8 +28,8 @@
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_wall</object>
-    <object>objects\obj_view</object>
     <object>objects\obj_dash_effect</object>
+    <object>objects\obj_display_manager</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start</room>
