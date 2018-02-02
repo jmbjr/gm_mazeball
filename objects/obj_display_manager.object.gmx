@@ -31,6 +31,7 @@ ideal_width = 0;
 ideal_height= 247;
 zoom = 1;
 max_zoom = 1;
+selected_view = display.view;
 
 // get and enforce aspect ratio
 aspect_ratio = display_get_width() / display_get_height();
@@ -134,6 +135,28 @@ if (keyboard_check_pressed(ord("Z")))
     alarm[0] = 1;
 }
 
+if (keyboard_check_pressed(ord("V")))
+{
+// toggle views
+    switch(selected_view)
+    {
+      case display.screen:
+        selected_view = display.window;
+        break;
+      case display.window:
+        selected_view = display.gui;
+        break;
+      case display.gui:
+        selected_view = display.app_surface;
+        break;
+      case display.app_surface:
+        selected_view = display.view;
+        break;
+      case display.view:
+        selected_view = display.screen;
+        break;
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -161,7 +184,7 @@ if (keyboard_check_pressed(ord("Z")))
 draw_set_color(c_white);
 draw_set_valign(fa_left);
 draw_set_halign(fa_top);
-draw_text(5, 5,display_write_specs(display.view));
+draw_text(5, 5,display_write_specs(selected_view));
 
 draw_set_halign(fa_right);
 draw_set_valign(fa_bottom);
