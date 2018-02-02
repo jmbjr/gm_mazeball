@@ -33,6 +33,7 @@ dur_dash = room_speed / 4;
 
 view_zoom = 3;
 view_max_zoom = 10;
+show_help = true;
 
 state = scr_move_state;
 hspd = 0;
@@ -163,6 +164,47 @@ view_yview=clamp(view_yview,0,room_height-view_hview);
         </arguments>
       </action>
     </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// HUD
+draw_set_color(c_white);
+draw_set_valign(fa_middle);
+draw_set_halign(fa_left);
+var v = 60;
+var spc = 18;
+var h = round(display_get_gui_width() / 4);
+
+if (show_help)
+{   
+    draw_text(h, v,"Moving: WASD, Arrows, GamePad")
+    draw_text(h, v+spc,"Dash: Move + C key (or A button)")
+    draw_text(h, v+2*spc,"Drink Potion: F key")
+    draw_text(h, v+3*spc,"Increase Window Size: Z key")
+    draw_text(h, v+4*spc,"Zoom: Q/E keys")
+    draw_text(h, v+5*spc,"Cycle Display Info: V key")
+    draw_text(h, v+6*spc,"Toggle Help: H key")
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -184,6 +226,35 @@ view_yview=clamp(view_yview,0,room_height-view_hview);
 draw_sprite(spr_player_shadow, image_index, x, y);
 draw_self();
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="72">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// toggle help
+
+if (show_help)
+    show_help = false;
+else
+    show_help = true;
+    
 </string>
           </argument>
         </arguments>

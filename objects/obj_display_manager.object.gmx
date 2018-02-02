@@ -75,6 +75,9 @@ alarm[0]=1;
 
 room_goto(room_next(room));
 
+//increase zoom by default
+scr_zoom();
+
 </string>
           </argument>
         </arguments>
@@ -126,13 +129,7 @@ window_center();
 
 if (keyboard_check_pressed(ord("Z")))
 {
-    zoom++;
-    if (zoom &gt; max_zoom)
-        zoom = 1;
-        
-    window_set_size(ideal_width*zoom, ideal_height*zoom);
-    surface_resize(application_surface, ideal_width*zoom, ideal_height*zoom);
-    alarm[0] = 1;
+    scr_zoom();
 }
 
 if (keyboard_check_pressed(ord("V")))
