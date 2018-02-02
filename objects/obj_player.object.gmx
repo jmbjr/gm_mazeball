@@ -31,7 +31,7 @@ walking_speed = 2;
 dash_speed = walking_speed * 4;
 dur_dash = room_speed / 4;
 
-view_zoom = 1;
+view_zoom = 3;
 view_max_zoom = 10;
 
 state = scr_move_state;
