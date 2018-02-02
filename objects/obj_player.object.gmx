@@ -40,7 +40,6 @@ len = 0;
 dir = 0;
 animation_speed = 0.2;
 
-phy_fixed_rotation = true;
 image_speed = 0;
 sprite_index = spr_player_down;
  
@@ -181,7 +180,7 @@ else
       </action>
     </event>
   </events>
-  <PhysicsObject>-1</PhysicsObject>
+  <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>1</PhysicsObjectShape>
   <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
@@ -192,10 +191,5 @@ else
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints>
-    <point>2,12</point>
-    <point>12,12</point>
-    <point>12,20</point>
-    <point>2,20</point>
-  </PhysicsShapePoints>
+  <PhysicsShapePoints/>
 </object>

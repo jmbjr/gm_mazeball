@@ -25,8 +25,8 @@ else
     if (image_index == 0) image_index = 1;
 }
 
-phy_position_x += hspd;
-phy_position_y += vspd;
+x += hspd;
+y += vspd;
 
 // handle animation
 if (vspd > 0)

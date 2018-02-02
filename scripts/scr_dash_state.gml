@@ -16,8 +16,8 @@ else
     if (image_index == 0) image_index = 1;
 }
 
-phy_position_x += hspd;
-phy_position_y += vspd;
+x += hspd;
+y += vspd;
 
 // create dash effect
 var dash = instance_create(x, y, obj_dash_effect);
