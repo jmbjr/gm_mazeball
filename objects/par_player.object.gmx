@@ -205,7 +205,7 @@ if (show_help)
     draw_text(h, v+4*spc,"Zoom: Q/E keys")
     draw_text(h, v+5*spc,"Cycle Display Info: V key")
     draw_text(h, v+6*spc,"Toggle Help: H key")
-    draw_text(h, v+7*spc,"Toggle View Follow: B button")
+    draw_text(h, v+7*spc,"Cycle Seasons: B button")
     draw_text(h, v+8*spc,"Restart Game: R key")
     draw_text(h, v+9*spc,"Quit Game: ESC key")
 }
