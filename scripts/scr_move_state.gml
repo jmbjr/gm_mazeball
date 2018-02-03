@@ -3,6 +3,10 @@
 scr_get_input();
 
 dir = point_direction(0, 0, xaxis, yaxis);
+var sprite_bbox_top = sprite_get_bbox_top(sprite_index) - sprite_get_yoffset(sprite_index);
+var sprite_bbox_left = sprite_get_bbox_left(sprite_index) - sprite_get_xoffset(sprite_index);
+var sprite_bbox_right = sprite_get_bbox_right(sprite_index) - sprite_get_xoffset(sprite_index);
+var sprite_bbox_bottom = sprite_get_bbox_bottom(sprite_index) - sprite_get_yoffset(sprite_index);
 
 if (xaxis == 0 && yaxis == 0) 
 {
@@ -33,8 +37,28 @@ if (change_view_key)
     follow_me = true;
 }
 
+//horizontal collision
+if (place_meeting(x+hspd,y,obj_wall))
+{
+    while(!place_meeting(x+sign(hspd),y,obj_wall))
+    {
+        x += sign(hspd);
+    }
+    hspd = 0;
+}
 x += hspd;
+ 
+//vertical collision
+if (place_meeting(x,y+vspd,obj_wall))
+{
+    while(!place_meeting(x,y+sign(vspd),obj_wall))
+    {
+        y += sign(vspd);
+    }
+    vspd = 0;
+}
 y += vspd;
+    
 
 // handle animation
 if (vspd > 0)
