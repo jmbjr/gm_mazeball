@@ -30,7 +30,7 @@ walking_speed = 2;
 dash_speed = walking_speed * 4;
 dur_dash = room_speed / 4;
 
-view_zoom = 3;
+view_zoom = 1;
 view_max_zoom = 10;
 show_help = true;
 
@@ -163,6 +163,8 @@ if (follow_me)
           <argument>
             <kind>1</kind>
             <string>/// collide with wall
+
+
 </string>
           </argument>
         </arguments>
@@ -203,7 +205,7 @@ if (show_help)
     draw_text(h, v+4*spc,"Zoom: Q/E keys")
     draw_text(h, v+5*spc,"Cycle Display Info: V key")
     draw_text(h, v+6*spc,"Toggle Help: H key")
-    draw_text(h, v+7*spc,"Toggle View Follow: X key")
+    draw_text(h, v+7*spc,"Toggle View Follow: B button")
 }
 
 </string>

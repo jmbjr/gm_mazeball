@@ -8,14 +8,30 @@
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_wall</sprite>
-    <sprite>sprites\spr_player_down</sprite>
-    <sprite>sprites\spr_player2_down</sprite>
-    <sprite>sprites\spr_player_up</sprite>
-    <sprite>sprites\spr_player2_up</sprite>
-    <sprite>sprites\spr_player_right</sprite>
-    <sprite>sprites\spr_player2_right</sprite>
-    <sprite>sprites\spr_player_left</sprite>
-    <sprite>sprites\spr_player2_left</sprite>
+    <sprites name="player1">
+      <sprite>sprites\spr_player1_down</sprite>
+      <sprite>sprites\spr_player1_up</sprite>
+      <sprite>sprites\spr_player1_right</sprite>
+      <sprite>sprites\spr_player1_left</sprite>
+    </sprites>
+    <sprites name="player2">
+      <sprite>sprites\spr_player2_down</sprite>
+      <sprite>sprites\spr_player2_up</sprite>
+      <sprite>sprites\spr_player2_right</sprite>
+      <sprite>sprites\spr_player2_left</sprite>
+    </sprites>
+    <sprites name="player3">
+      <sprite>sprites\spr_player3_down</sprite>
+      <sprite>sprites\spr_player3_up</sprite>
+      <sprite>sprites\spr_player3_right</sprite>
+      <sprite>sprites\spr_player3_left</sprite>
+    </sprites>
+    <sprites name="player4">
+      <sprite>sprites\spr_player4_up</sprite>
+      <sprite>sprites\spr_player4_down</sprite>
+      <sprite>sprites\spr_player4_right</sprite>
+      <sprite>sprites\spr_player4_left</sprite>
+    </sprites>
     <sprite>sprites\spr_player_shadow</sprite>
   </sprites>
   <backgrounds name="background">
@@ -38,6 +54,8 @@
     <object>objects\par_player</object>
     <object>objects\obj_player1</object>
     <object>objects\obj_player2</object>
+    <object>objects\obj_player3</object>
+    <object>objects\obj_player4</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_dash_effect</object>
     <object>objects\obj_display_manager</object>

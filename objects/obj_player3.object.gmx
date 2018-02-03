@@ -39,14 +39,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// player 1 stats
-playerID = 0;
-player_down = spr_player1_down; 
-player_up = spr_player1_up;
-player_right = spr_player1_right;
-player_left = spr_player1_left;
-follow_me = true;
-
+            <string>/// player 3 stats
+playerID = 2;
+player_down = spr_player3_down;
+player_up = spr_player3_up;
+player_right = spr_player3_right;
+player_left = spr_player3_left;
+follow_me = false;
 </string>
           </argument>
         </arguments>
@@ -55,7 +54,7 @@ follow_me = true;
   </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
-  <PhysicsObjectShape>0</PhysicsObjectShape>
+  <PhysicsObjectShape>1</PhysicsObjectShape>
   <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
   <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
