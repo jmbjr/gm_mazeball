@@ -7,6 +7,9 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
+    <sprites name="walls">
+      <sprite>sprites\spr_bush</sprite>
+    </sprites>
     <sprite>sprites\spr_wall</sprite>
     <sprites name="player1">
       <sprite>sprites\spr_player1_down</sprite>
@@ -50,6 +53,7 @@
     <script>scripts\display_write_specs.gml</script>
     <script>scripts\scr_zoom.gml</script>
     <script>scripts\scr_set_bkg.gml</script>
+    <script>scripts\scr_basic_collision.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_basic</font>
@@ -60,9 +64,10 @@
     <object>objects\obj_player2</object>
     <object>objects\obj_player3</object>
     <object>objects\obj_player4</object>
-    <object>objects\obj_wall</object>
+    <object>objects\par_wall</object>
     <object>objects\obj_dash_effect</object>
     <object>objects\obj_display_manager</object>
+    <object>objects\obj_bush</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\_init_display</room>
