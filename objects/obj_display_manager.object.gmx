@@ -26,12 +26,19 @@
           <argument>
             <kind>1</kind>
             <string>/// Display Properties
+enum bkg{spring, summer, fall, winter };
 
 ideal_width = 0;
 ideal_height= 247;
 zoom = 1;
 max_zoom = 1;
 selected_view = display.view;
+current_bkg = bkg.spring;
+draw_gui = false;
+current_season[bkg.spring] = "Spring";
+current_season[bkg.summer] = "Summer";
+current_season[bkg.fall] = "Fall";
+current_season[bkg.winter] = "Winter";
 
 // get and enforce aspect ratio
 aspect_ratio = display_get_width() / display_get_height();
@@ -74,9 +81,9 @@ display_set_gui_size(ideal_width, ideal_height);
 alarm[0]=1;
 
 room_goto(room_next(room));
-
 //increase zoom by default
 scr_zoom();
+scr_set_bkg();
 
 </string>
           </argument>
@@ -125,7 +132,7 @@ window_center();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///zoom window
+            <string>///handle generic view stuff
 
 if (keyboard_check_pressed(ord("Z")))
 {
@@ -154,6 +161,31 @@ if (keyboard_check_pressed(ord("V")))
         break;
     }
 }
+
+//toggle backgrounds
+if (keyboard_check_pressed(ord("B")))
+{
+    current_bkg++;
+    if (current_bkg&gt;3 || current_bkg&lt;0)
+        current_bkg = 0; 
+    scr_set_bkg();
+}
+
+if (keyboard_check_pressed(ord("G")))
+{
+    if (draw_gui)
+        draw_gui = false;
+    else
+        draw_gui = true;
+}
+
+if (keyboard_check_pressed(ord("R")))
+    game_restart();
+
+
+if (keyboard_check_pressed(vk_escape))
+    game_end();
+    
 </string>
           </argument>
         </arguments>
@@ -177,16 +209,19 @@ if (keyboard_check_pressed(ord("V")))
           <argument>
             <kind>1</kind>
             <string>/// draw gui
-
 draw_set_font(fnt_basic);
 draw_set_color(c_white);
-draw_set_valign(fa_left);
-draw_set_halign(fa_top);
-draw_text(5, 5,display_write_specs(selected_view));
+
+if (draw_gui)
+{
+    draw_set_valign(fa_left);
+    draw_set_halign(fa_top);
+    draw_text(5, 5,display_write_specs(selected_view));
+}
 
 draw_set_halign(fa_right);
 draw_set_valign(fa_bottom);
-draw_text(display_get_gui_width()-5, display_get_gui_height()-5, "Bottom Right");
+draw_text(display_get_gui_width()-5, display_get_gui_height()-5, current_season[current_bkg]);
 
 </string>
           </argument>

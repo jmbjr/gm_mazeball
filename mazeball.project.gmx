@@ -36,6 +36,9 @@
   </sprites>
   <backgrounds name="background">
     <background>background\bkg_grass</background>
+    <background>background\bkg_lush</background>
+    <background>background\bkg_snow</background>
+    <background>background\bkg_leaves</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -46,6 +49,7 @@
     <script>scripts\scr_thaw_state.gml</script>
     <script>scripts\display_write_specs.gml</script>
     <script>scripts\scr_zoom.gml</script>
+    <script>scripts\scr_set_bkg.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_basic</font>

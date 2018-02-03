@@ -198,14 +198,16 @@ var h = round(display_get_gui_width() / 4);
 
 if (show_help)
 {   
-    draw_text(h, v,"Moving: WASD, Arrows, GamePad")
-    draw_text(h, v+spc,"Dash: Move + C key (or A button)")
+    draw_text(h, v,"Moving: GamePad")
+    draw_text(h, v+spc,"Dash: Move + A button")
     draw_text(h, v+2*spc,"Drink Potion: F key")
     draw_text(h, v+3*spc,"Increase Window Size: Z key")
     draw_text(h, v+4*spc,"Zoom: Q/E keys")
     draw_text(h, v+5*spc,"Cycle Display Info: V key")
     draw_text(h, v+6*spc,"Toggle Help: H key")
     draw_text(h, v+7*spc,"Toggle View Follow: B button")
+    draw_text(h, v+8*spc,"Restart Game: R key")
+    draw_text(h, v+9*spc,"Quit Game: ESC key")
 }
 
 </string>
