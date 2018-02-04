@@ -29,6 +29,7 @@
 walking_speed = 2;
 dash_speed = walking_speed * 4;
 dur_dash = room_speed / 4;
+dur_help = room_speed * 4;
 
 view_zoom = 1;
 view_max_zoom = 10;
@@ -48,7 +49,33 @@ animation_speed = 0.2;
 image_speed = 0;
 
 sprite_index = noone;
+alarm[1] = dur_help;
  
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// toggle off help
+show_help = false;
+
 </string>
           </argument>
         </arguments>
@@ -182,16 +209,17 @@ var h = round(display_get_gui_width() / 4);
 
 if (show_help)
 {   
-    draw_text(h, v,"Moving: GamePad")
-    draw_text(h, v+spc,"Dash: Move + A button")
+    draw_text(h, v,"Toggle Help: H key")
+    draw_text(h, v+spc,"Moving: GamePad")
     draw_text(h, v+2*spc,"Drink Potion: F key")
     draw_text(h, v+3*spc,"Increase Window Size: Z key")
     draw_text(h, v+4*spc,"Zoom: Q/E keys")
     draw_text(h, v+5*spc,"Cycle Display Info: V key")
-    draw_text(h, v+6*spc,"Toggle Help: H key")
+    draw_text(h, v+6*spc,"Dash: Move + A button")
     draw_text(h, v+7*spc,"Cycle Seasons: B button")
-    draw_text(h, v+8*spc,"Restart Game: R key")
-    draw_text(h, v+9*spc,"Quit Game: ESC key")
+    draw_text(h, v+8*spc,"Toggle BBOX: P button")
+    draw_text(h, v+9*spc,"Restart Game: R key")
+    draw_text(h, v+10*spc,"Quit Game: ESC key")
 }
 
 </string>
