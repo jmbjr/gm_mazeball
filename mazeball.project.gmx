@@ -42,6 +42,7 @@
     <background>background\bkg_lush</background>
     <background>background\bkg_snow</background>
     <background>background\bkg_leaves</background>
+    <background>background\tile_bush</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -54,6 +55,7 @@
     <script>scripts\scr_zoom.gml</script>
     <script>scripts\scr_set_bkg.gml</script>
     <script>scripts\scr_basic_collision.gml</script>
+    <script>scripts\tile_fill_object.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_basic</font>

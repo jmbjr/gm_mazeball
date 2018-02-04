@@ -217,6 +217,7 @@ if (draw_gui)
     draw_set_valign(fa_left);
     draw_set_halign(fa_top);
     draw_text(5, 5,display_write_specs(selected_view));
+    draw_text(5, 20, string(instance_count));
 }
 
 draw_set_halign(fa_right);
