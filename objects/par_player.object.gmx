@@ -33,6 +33,7 @@ dur_dash = room_speed / 4;
 view_zoom = 1;
 view_max_zoom = 10;
 show_help = true;
+draw_bbox = false;
 
 state = scr_move_state;
 move_state = scr_move_state;
@@ -100,6 +101,14 @@ if (sprite_index == noone)
     sprite_index = player_down;
     
 script_execute(state);
+
+if (keyboard_check_pressed(ord("P")))
+{
+    if (draw_bbox)
+        draw_bbox = false;
+    else
+        draw_bbox = true;
+}
 </string>
           </argument>
         </arguments>
@@ -210,9 +219,11 @@ if (show_help)
             <string>/// draw shadow
 draw_sprite(spr_player_shadow, image_index, x, y);
 draw_self();
-draw_set_alpha(0.5);
-draw_rectangle_colour(bbox_left,bbox_top,bbox_right,bbox_bottom,c_red,c_red,c_red,c_red,false);
-
+if (draw_bbox)
+{
+    draw_set_alpha(0.5);
+    draw_rectangle_colour(bbox_left,bbox_top,bbox_right,bbox_bottom,c_red,c_red,c_red,c_red,false);
+}
 
 </string>
           </argument>
