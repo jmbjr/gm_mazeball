@@ -52,6 +52,7 @@
     <script>scripts\scr_zoom.gml</script>
     <script>scripts\scr_set_bkg.gml</script>
     <script>scripts\scr_basic_collision.gml</script>
+    <script>scripts\place_meeting_grid.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_basic</font>

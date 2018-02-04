@@ -45,6 +45,8 @@ for (var ii=0; ii&lt;width; ii++)
     }
 }
 
+var xx=1;
+
 </string>
           </argument>
         </arguments>
