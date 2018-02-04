@@ -28,7 +28,7 @@
             <string>/// ds_grid for tiles
 enum tiletype{empty, solid};
 
-cell_size = 32;
+cell_size = 16;
 width = room_width / cell_size;
 height = room_height / cell_size;
 

@@ -3,8 +3,8 @@
   <caption></caption>
   <width>800</width>
   <height>800</height>
-  <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>16</vsnap>
+  <hsnap>16</hsnap>
   <isometric>0</isometric>
   <speed>30</speed>
   <persistent>0</persistent>
@@ -104,9 +104,6 @@
     <tile bgName="tile_bush" x="736" y="768" w="32" h="32" xo="0" yo="0" id="10000123" name="inst_7DE78F21" depth="-5" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tile_bush" x="704" y="768" w="32" h="32" xo="0" yo="0" id="10000124" name="inst_8153D8EC" depth="-5" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tile_bush" x="672" y="768" w="32" h="32" xo="0" yo="0" id="10000125" name="inst_A1C9624C" depth="-5" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tile_bush" x="192" y="64" w="32" h="32" xo="0" yo="0" id="10000133" name="inst_C0F9BA4A" depth="-5" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tile_bush" x="224" y="64" w="32" h="32" xo="0" yo="0" id="10000134" name="inst_D839AF5E" depth="-5" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tile_bush" x="256" y="64" w="32" h="32" xo="0" yo="0" id="10000135" name="inst_D8B699AD" depth="-5" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tile_bush" x="320" y="64" w="32" h="32" xo="0" yo="0" id="10000137" name="inst_CB7DAB50" depth="-5" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tile_bush" x="352" y="64" w="32" h="32" xo="0" yo="0" id="10000138" name="inst_39A463EA" depth="-5" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tile_bush" x="384" y="64" w="32" h="32" xo="0" yo="0" id="10000139" name="inst_E27B54F7" depth="-5" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -308,6 +305,12 @@
     <tile bgName="tile_bush" x="608" y="448" w="32" h="32" xo="32" yo="32" id="10000407" name="inst_7059F3FF" depth="-5" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tile_bush" x="608" y="480" w="32" h="32" xo="32" yo="32" id="10000408" name="inst_B90EE584" depth="-5" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tile_bush" x="576" y="448" w="32" h="32" xo="0" yo="0" id="10000409" name="inst_F7935DD8" depth="-5" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tile_bush" x="256" y="80" w="32" h="16" xo="0" yo="16" id="10000412" name="inst_3797A2C3" depth="-5" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tile_bush" x="224" y="80" w="32" h="16" xo="0" yo="16" id="10000413" name="inst_F195FCFC" depth="-5" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tile_bush" x="192" y="80" w="32" h="16" xo="0" yo="16" id="10000414" name="inst_BF5AA113" depth="-5" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tile_bush" x="192" y="64" w="32" h="16" xo="0" yo="0" id="10000415" name="inst_3C933464" depth="-20" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tile_bush" x="224" y="64" w="32" h="16" xo="0" yo="0" id="10000416" name="inst_4ADA1B91" depth="-20" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tile_bush" x="256" y="64" w="32" h="16" xo="0" yo="0" id="10000417" name="inst_50BFAF68" depth="-20" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>-1</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>
