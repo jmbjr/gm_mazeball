@@ -7,9 +7,6 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
-    <sprites name="walls">
-      <sprite>sprites\spr_bush</sprite>
-    </sprites>
     <sprite>sprites\spr_wall</sprite>
     <sprites name="player1">
       <sprite>sprites\spr_player1_down</sprite>
@@ -55,7 +52,6 @@
     <script>scripts\scr_zoom.gml</script>
     <script>scripts\scr_set_bkg.gml</script>
     <script>scripts\scr_basic_collision.gml</script>
-    <script>scripts\tile_fill_object.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_basic</font>
@@ -69,7 +65,7 @@
     <object>objects\par_wall</object>
     <object>objects\obj_dash_effect</object>
     <object>objects\obj_display_manager</object>
-    <object>objects\obj_bush</object>
+    <object>objects\obj_grid</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\_init_display</room>
