@@ -1,40 +1,46 @@
-///place_meeting_grid(xpos,ypos,tile_type)
-var xpos = argument[0];
-var ypos = argument[1];
-var tile_type = argument[2];
-var chk = false;
-var tile_type_chk = 0;
-var xchk = noone;
-var ychk = noone;
+/// @description scr_gridPlaceMeeting(x,y, tileType);
+/// @param x
+/// @param y
+/// @param TILETYPE
+ 
+/*
+    Please Note:    -   This script was designed to be used for movement code, where the movement did not exceed one cell (eg 32px)
+                    -   Checks for edges only! Not the inner part of your object. Eg assuming a 3x3 cell object the "middle" tile is NOT checked.
+            You can either write your own loop to handle this case, or if the grid entries allow use the built in ds_grid_get_sum or _max functions to check all cells at once!
+*/
+ 
+// === Grab Arguments === //
+var _x = argument[0],
+    _y = argument[1],
+    _tileType = argument[2],
+    _g = obj_grid.grid;       // grab local grid handle for performance boost - not neccesary when a global var. Shown here for consistency reasons.
+    _t = obj_grid.cell_size;
+    
+// === determine coords === //
+var _xp = x, // save previous position
+    _yp = y;
+    
+x = _x; // move to update bbox coordinates
+y = _y;
 
-//we check 5 points to see if any of them live in a grid cell that matches the tiletype
-var _grid = obj_grid.grid;
-var _cell_size = obj_grid.cell_size;
-
-var bbox_width = bbox_right - bbox_left;
-var bbox_height = bbox_bottom - bbox_top;
-
-var xoffset = bbox_width - sprite_xoffset;
-var yoffset = bbox_height - sprite_yoffset;
-
-//for each point, we need to get the grid equiv, then check for tiletype
-xchk[0] = (xpos - xoffset) div _cell_size; // middle
-xchk[1] = (xpos - xoffset + round(bbox_width/2)) div _cell_size; //right
-xchk[2] = (xpos - xoffset - round(bbox_width/2)) div _cell_size; //left
-xchk[3] = (xpos - xoffset + round(bbox_width/2)) div _cell_size; //right
-xchk[4] = (xpos - xoffset - round(bbox_width/2)) div _cell_size; //left
-
-ychk[0] = (ypos - yoffset) div _cell_size; //middle
-ychk[1] = (ypos - yoffset - round(bbox_height/2)) div _cell_size; //top
-ychk[2] = (ypos - yoffset - round(bbox_height/2)) div _cell_size; //top
-ychk[3] = (ypos - yoffset + round(bbox_height/2)) div _cell_size; //bottom
-ychk[4] = (ypos - yoffset + round(bbox_height/2)) div _cell_size; //bottom
-
-for (var ii=0; ii<array_length_1d(xchk); ii++)
-{
-    var tile_type_chk = ds_grid_get(_grid, xchk[ii], ychk[ii]);
-    chk = ((tile_type_chk == tile_type) || chk);
-}
-
-return chk;
-
+var _r = bbox_right div _t,// << do these calculations only once - again performance reasons!
+    _l = bbox_left div _t,
+    _u = bbox_top div _t,
+    _d = bbox_bottom div _t;
+    
+x = _xp; // move back
+y = _yp;
+ 
+// === Check Corners === // : if any of these flag true ==> early exit;
+var col = ( _g[# _l, _u] == _tileType ||// Left  Top Corner
+            _g[# _r, _u] == _tileType ||// Right Top Corner
+            _g[# _l, _d] == _tileType ||// Left  Bot Corner
+            _g[# _r, _d] == _tileType );// Right Bot Corner
+            
+if col return col;// return if collision detected, bypass edge check
+ 
+// === Edge Check === // : triggered if there is more than 1 cell between left + right or top + bot tile.
+var i=1; repeat(_r-_l-1){ if (_g[# _l+i,_u] == _tileType  || _g[# _l+i, _d] == _tileType ) {return true} ++i}; // check cells between LR (eg 5-3) => 3 cells, 1 cell in between to check.  [LEFT]-[TOCHECK]-[RIGHT]
+var j=1; repeat(_d-_u-1){ if (_g[# _l,_u+j] == _tileType  || _g[# _r, _u+j] == _tileType ) {return true} ++j}; // check cells between UD
+ 
+return col;// return [true,false]
