@@ -55,13 +55,17 @@
     <script>scripts\scr_basic_collision.gml</script>
     <script>scripts\place_meeting_grid.gml</script>
     <script>scripts\scr_sync_shadow.gml</script>
+    <script>scripts\tile_move.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_basic</font>
   </fonts>
   <objects name="objects">
+    <object>objects\obj_global</object>
     <object>objects\par_player</object>
     <object>objects\par_shadow</object>
+    <object>objects\par_tiletype</object>
+    <object>objects\obj_grid</object>
     <object>objects\obj_player1</object>
     <object>objects\obj_player2</object>
     <object>objects\obj_player3</object>
@@ -69,8 +73,7 @@
     <object>objects\par_wall</object>
     <object>objects\obj_dash_effect</object>
     <object>objects\obj_display_manager</object>
-    <object>objects\obj_grid</object>
-    <object>objects\obj_under</object>
+    <object>objects\obj_tiletype_under</object>
     <object>objects\obj_shadow1</object>
     <object>objects\obj_shadow2</object>
     <object>objects\obj_shadow3</object>
