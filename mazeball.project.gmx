@@ -46,13 +46,19 @@
   <scripts name="scripts">
     <script>scripts\display_write_specs.gml</script>
     <script>scripts\place_meeting_grid.gml</script>
+    <script>scripts\scr_animate_player.gml</script>
     <script>scripts\scr_basic_collision.gml</script>
+    <script>scripts\scr_dash.gml</script>
+    <script>scripts\scr_follow_me.gml</script>
     <script>scripts\scr_get_input.gml</script>
+    <script>scripts\scr_handle_buttons.gml</script>
+    <script>scripts\scr_move.gml</script>
     <script>scripts\scr_set_bkg.gml</script>
     <script>scripts\scr_sync_shadow.gml</script>
     <script>scripts\scr_zoom.gml</script>
     <script>scripts\state_dash.gml</script>
     <script>scripts\state_frozen.gml</script>
+    <script>scripts\state_jump.gml</script>
     <script>scripts\state_move.gml</script>
     <script>scripts\state_thaw.gml</script>
     <script>scripts\tile_move.gml</script>
