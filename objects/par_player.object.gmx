@@ -27,10 +27,18 @@
             <kind>1</kind>
             <string>/// create
 walking_speed = 2;
+
+//I think I need a proper data structure for these states
+//dash
 dash_speed = walking_speed * 4;
-dur_dash_max = room_speed*5;
+dur_dash_max = room_speed*1.5;
 dur_dash = 0;
 cd_rate_dash = 5;
+
+//frozen
+dur_frozen_max = room_speed*8;
+dur_frozen = 0;
+cd_rate_frozen = 5;
 
 dur_help = room_speed * 4;
 
@@ -107,13 +115,6 @@ if (sprite_index == noone)
     
 script_execute(current_state);
 
-if (keyboard_check_pressed(ord("P")))
-{
-    if (draw_bbox)
-        draw_bbox = false;
-    else
-        draw_bbox = true;
-}
 </string>
           </argument>
         </arguments>
@@ -230,65 +231,6 @@ if (draw_bbox)
     draw_set_alpha(0.5);
     draw_rectangle_colour(bbox_left,bbox_top,bbox_right,bbox_bottom,c_red,c_red,c_red,c_red,false);
 }
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="72">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// toggle help
-
-if (show_help)
-    show_help = false;
-else
-    show_help = true;
-    
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="70">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>// set frozen state
-
-if (current_state != state.frozen) 
-    current_state = state.frozen;
-else
-    current_state = state.thaw;
-
 
 </string>
           </argument>

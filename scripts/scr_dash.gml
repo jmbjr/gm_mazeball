@@ -6,5 +6,4 @@ dash.image_index = image_index;
 dur_dash -= cd_rate_dash;
 if (dur_dash<=0)
     current_state = state.move; // probably makes sense to transition back to just moving
-    
-    
+     
