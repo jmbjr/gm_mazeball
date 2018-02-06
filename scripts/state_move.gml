@@ -2,7 +2,7 @@
 
 scr_get_input();
 scr_handle_buttons();
-if (state == state_move)
+if (current_state == state.move)
 {
     scr_move(walking_speed);
     scr_basic_collision();

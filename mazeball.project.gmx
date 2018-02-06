@@ -62,6 +62,7 @@
     <script>scripts\state_move.gml</script>
     <script>scripts\state_thaw.gml</script>
     <script>scripts\tile_move.gml</script>
+    <script>scripts\state_idle.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_basic</font>

@@ -36,8 +36,7 @@ view_max_zoom = 10;
 show_help = true;
 draw_bbox = false;
 
-state = state_move;
-move_state = state_move;
+current_state = state.idle;
 
 hspd = 0;
 vspd = 0;
@@ -100,7 +99,7 @@ show_help = false;
             <kind>1</kind>
             <string>/// dash state alarm
 
-state = state_move;
+current_state = state.move;
 </string>
           </argument>
         </arguments>
@@ -127,7 +126,7 @@ state = state_move;
 if (sprite_index == noone)
     sprite_index = player_down;
     
-script_execute(state);
+script_execute(current_state);
 
 if (keyboard_check_pressed(ord("P")))
 {
@@ -305,14 +304,12 @@ else
           <argument>
             <kind>1</kind>
             <string>// set frozen state
-if (state != state_frozen) 
-{
-    state = state_frozen;
-}
+
+if (current_state != state.frozen) 
+    current_state = state.frozen;
 else
-{
-    state = state_thaw;
-}
+    current_state = state.thaw;
+
 
 </string>
           </argument>

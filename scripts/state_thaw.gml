@@ -1,4 +1,4 @@
 /// state_thaw
 image_blend = -1;
-state = move_state;
+current_state = state.idle;
 
