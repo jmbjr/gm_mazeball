@@ -1,4 +1,4 @@
-/// scr_dash_state
+/// state_dash
 
 if (xaxis == 0 && yaxis == 0) 
 {

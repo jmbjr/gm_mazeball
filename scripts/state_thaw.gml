@@ -1,4 +1,4 @@
-/// scr_thaw_state
+/// state_thaw
 image_blend = -1;
 state = move_state;
 

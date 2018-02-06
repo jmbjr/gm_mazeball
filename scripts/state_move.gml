@@ -1,4 +1,4 @@
-/// scr_move_state
+/// state_move
 
 scr_get_input();
 
@@ -20,7 +20,7 @@ else
 // actually moving
     if (dash_key)
     {
-        state = scr_dash_state;
+        state = state_dash;
         alarm[0] = dur_dash;
     }
      

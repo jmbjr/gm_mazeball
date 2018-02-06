@@ -36,8 +36,8 @@ view_max_zoom = 10;
 show_help = true;
 draw_bbox = false;
 
-state = scr_move_state;
-move_state = scr_move_state;
+state = state_move;
+move_state = state_move;
 
 hspd = 0;
 vspd = 0;
@@ -100,7 +100,7 @@ show_help = false;
             <kind>1</kind>
             <string>/// dash state alarm
 
-state = scr_move_state;
+state = state_move;
 </string>
           </argument>
         </arguments>
@@ -305,13 +305,13 @@ else
           <argument>
             <kind>1</kind>
             <string>// set frozen state
-if (state != scr_frozen_state) 
+if (state != state_frozen) 
 {
-    state = scr_frozen_state;
+    state = state_frozen;
 }
 else
 {
-    state = scr_thaw_state;
+    state = state_thaw;
 }
 
 </string>
