@@ -9,5 +9,5 @@ if (change_view_key)
 if (dash_key)
 {
     current_state = state.dash;
-    alarm[0] = dur_dash;
+    dur_dash = dur_dash_max; 
 }
