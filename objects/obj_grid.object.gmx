@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>/// initialize grid
-init_grid();
+init_grid(room_width, room_height);
 
 
 
@@ -53,21 +53,9 @@ init_grid();
           <argument>
             <kind>1</kind>
             <string>/// update grid
+update_grid(grid, width, height);
 
-if (global.grid_refresh)
-{
-    ds_grid_clear(grid, tiletype.empty);
-    
-    for (var ii=0; ii&lt;width; ii++)
-    {
-        for (var jj=0; jj&lt;height; jj++)
-        {
-            if (tile_layer_find(tiledepth.solid,ii*global.cell_size, jj*global.cell_size))
-                ds_grid_set(grid, ii, jj, tiletype.solid);
-        }
-    }
-    global.grid_refresh = false;
-}
+
 </string>
           </argument>
         </arguments>

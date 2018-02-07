@@ -83,6 +83,9 @@
       <script>scripts\state_thaw.gml</script>
       <script>scripts\is_idle.gml</script>
     </scripts>
+    <scripts name="map">
+      <script>scripts\update_grid.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_basic</font>
