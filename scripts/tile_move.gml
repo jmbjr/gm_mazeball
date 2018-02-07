@@ -5,7 +5,7 @@ var _depth_dest = argument[1];
 var _x = argument[2];
 var _y = argument[3];
 var _g = obj_grid.grid;       // grab local grid handle for performance boost - not neccesary when a global var. Shown here for consistency reasons.
-var _t = obj_grid.cell_size;
+var _t = global.cell_size;
 
 //VERY STRONG ASSUMPTION that tile width and height is _t. this should be a constant
 var _tile = tile_layer_find(_depth_src, _x, _y);
