@@ -28,6 +28,14 @@ if (keyboard_check_pressed(ord("P")))
         draw_bbox = true;
 }
 
+if (keyboard_check_pressed(ord("R")))
+    game_restart();
+
+
+if (keyboard_check_pressed(vk_escape))
+    game_end();
+
+
 // NOW CHECK FOR NEW STATES 
 if (dash_key)
 {

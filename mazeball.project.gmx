@@ -70,8 +70,6 @@
       <script>scripts\scr_dash.gml</script>
       <script>scripts\scr_animate_player.gml</script>
       <script>scripts\scr_move.gml</script>
-      <script>scripts\scr_handle_buttons.gml</script>
-      <script>scripts\scr_get_input.gml</script>
       <script>scripts\scr_basic_collision.gml</script>
     </scripts>
     <scripts name="states">
@@ -85,6 +83,11 @@
     </scripts>
     <scripts name="map">
       <script>scripts\update_grid.gml</script>
+    </scripts>
+    <scripts name="input">
+      <script>scripts\scr_get_input.gml</script>
+      <script>scripts\scr_handle_buttons.gml</script>
+      <script>scripts\scr_handle_display_inputs.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
