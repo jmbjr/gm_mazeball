@@ -128,7 +128,7 @@ window_center();
           <argument>
             <kind>1</kind>
             <string>/// handle display manager inputs
- scr_handle_display_inputs();
+input_display_manager();
  
     
 </string>

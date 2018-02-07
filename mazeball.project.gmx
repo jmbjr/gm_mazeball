@@ -87,7 +87,7 @@
     <scripts name="input">
       <script>scripts\scr_get_input.gml</script>
       <script>scripts\scr_handle_buttons.gml</script>
-      <script>scripts\scr_handle_display_inputs.gml</script>
+      <script>scripts\input_display_manager.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
