@@ -1,9 +1,10 @@
-/// scr_sync_shadow(player)
-player = argument[0];
+/// scr_sync_shadow(shadow, target_player)
+var _shadow = argument[0];
+var _target_player = argument[1];
 
-x = player.x;
-y = player.y;
-image_index = player.image_index;
-image_speed = player.image_speed;
+_shadow.x = _target_player.x;
+_shadow.y = _target_player.y;
+_shadow.image_index = _target_player.image_index;
+_shadow.image_speed = _target_player.image_speed;
 
 

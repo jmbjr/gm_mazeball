@@ -7,10 +7,10 @@ scr_handle_buttons();
 // feels like bad practice
 if (current_state == state.move)
 {
-    scr_move(walking_speed);
-    scr_basic_collision();
-    scr_animate_player();
+    scr_move(self, walking_speed);
+    scr_basic_collision(self);
+    scr_animate_player(self);
 }
 
-if (is_idle())
+if (is_idle(self))
     current_state = state.idle;

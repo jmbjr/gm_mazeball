@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// start at player location
+            <string>/// init
 player = noone;
 
 
@@ -52,8 +52,8 @@ player = noone;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//sync with player
-scr_sync_shadow(player);
+            <string>/// sync with player
+scr_sync_shadow(self, player);
 
 </string>
           </argument>

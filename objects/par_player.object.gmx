@@ -190,8 +190,8 @@ if (show_help)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// draw shadow
-//draw_sprite(spr_player_shadow, image_index, x, y);
+            <string>/// sprite drawing + augmentations
+
 draw_self();
 if (draw_bbox)
 {

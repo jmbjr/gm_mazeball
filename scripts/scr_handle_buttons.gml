@@ -8,7 +8,7 @@
 // BE CONSISTENT!
 
 if (change_view_key)
-    scr_follow_me();
+    scr_follow_me(self);
 
 /// toggle help
 if (keyboard_check_pressed(ord("H")))

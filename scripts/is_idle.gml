@@ -1,2 +1,5 @@
 /// is_idle
-return (xaxis == 0 && yaxis == 0)
+var _player = argument[0];
+
+with (_player)
+    return (xaxis == 0 && yaxis == 0)

@@ -1,26 +1,30 @@
 ///scr_basic_collision
+var _player = argument[0];
 
-//horizontal collision
-if (place_meeting_grid(x+hspd, y, tiletype.solid))
+with (_player)
 {
-    while(!place_meeting_grid(x+sign(hspd), y, tiletype.solid))
+    //horizontal collision
+    if (place_meeting_grid(x+hspd, y, tiletype.solid))
     {
-        x += sign(hspd);
+        while(!place_meeting_grid(x+sign(hspd), y, tiletype.solid))
+        {
+            x += sign(hspd);
+        }
+        hspd = 0;
     }
-    hspd = 0;
-}
-x += hspd;
-  
-//vertical collision
-if (place_meeting_grid(x, y+vspd, tiletype.solid))
-{
-    while(!place_meeting_grid(x, y+sign(vspd), tiletype.solid))
+    x += hspd;
+      
+    //vertical collision
+    if (place_meeting_grid(x, y+vspd, tiletype.solid))
     {
-        y += sign(vspd);
+        while(!place_meeting_grid(x, y+sign(vspd), tiletype.solid))
+        {
+            y += sign(vspd);
+        }
+        vspd = 0;
     }
-    vspd = 0;
+    y += vspd;
 }
-y += vspd;
 
 /**
 Before using the ds_grid, this worked below with checking against an object inheriting from par_wall
