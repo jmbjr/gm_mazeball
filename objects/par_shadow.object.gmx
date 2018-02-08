@@ -53,7 +53,7 @@ player = noone;
           <argument>
             <kind>1</kind>
             <string>/// sync with player
-scr_sync_shadow(self, player);
+scr_follow_object(self, player, 0, 0);
 
 </string>
           </argument>
