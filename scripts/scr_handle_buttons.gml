@@ -19,8 +19,8 @@ if (keyboard_check_pressed(ord("H")))
         show_help = true;
 }
 // test status effect
-if (keyboard_check_pressed(ord("O")))
-    effect_fast(obj_player1);
+if (fast_key)
+    effect_fast(global.player[playerID]);
     
 // draw BBOXES
 if (keyboard_check_pressed(ord("P")))
