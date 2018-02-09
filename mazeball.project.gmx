@@ -38,6 +38,9 @@
       <sprite>sprites\spr_wall</sprite>
       <sprite>sprites\spr_under</sprite>
     </sprites>
+    <sprites name="effects">
+      <sprite>sprites\spr_smoke</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bkg_grass</background>
@@ -123,6 +126,7 @@
       <objects name="effects">
         <object>objects\par_effect</object>
         <object>objects\obj_effect_fast</object>
+        <object>objects\obj_smoke</object>
       </objects>
     </objects>
     <objects name="tiles">
