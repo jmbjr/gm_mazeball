@@ -18,7 +18,10 @@ if (keyboard_check_pressed(ord("H")))
     else
         show_help = true;
 }
-
+// test status effect
+if (keyboard_check_pressed(ord("O")))
+    effect_fast(obj_player1);
+    
 // draw BBOXES
 if (keyboard_check_pressed(ord("P")))
 {

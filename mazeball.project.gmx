@@ -89,6 +89,9 @@
       <script>scripts\scr_handle_buttons.gml</script>
       <script>scripts\input_display_manager.gml</script>
     </scripts>
+    <scripts name="effects">
+      <script>scripts\effect_fast.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_basic</font>
@@ -114,11 +117,12 @@
         <object>objects\obj_shadow3</object>
         <object>objects\obj_shadow4</object>
       </objects>
-      <objects name="effects">
+      <objects name="states">
         <object>objects\obj_dash_effect</object>
       </objects>
       <objects name="effects">
         <object>objects\par_effect</object>
+        <object>objects\obj_effect_fast</object>
       </objects>
     </objects>
     <objects name="tiles">

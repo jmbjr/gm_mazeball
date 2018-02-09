@@ -2,6 +2,7 @@
 
 /// create
 walking_speed = 2;
+speed_multiplier = 1; 
 
 //I think I need a proper data structure for these states
 //dash

@@ -3,6 +3,8 @@
 var _player = argument[0];
 var _move_speed = argument[1];
 
+_move_speed *= speed_multiplier;
+
 with (_player)
 {
     dir = point_direction(0, 0, xaxis, yaxis);
