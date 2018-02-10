@@ -77,9 +77,7 @@ show_help = false;
           <argument>
             <kind>1</kind>
             <string>/// Move player via step events
-if (sprite_index == noone)
-    sprite_index = player_down;
-    
+sprite_index = sprite[spritedir];
 script_execute(current_state);
 
 </string>

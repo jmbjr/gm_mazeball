@@ -41,10 +41,12 @@
             <kind>1</kind>
             <string>/// player 1 stats
 playerID = 0;
-player_down = spr_player1_down; 
-player_up = spr_player1_up;
-player_right = spr_player1_right;
-player_left = spr_player1_left;
+sprite[facing.right] = spr_player1_right;
+sprite[facing.up] = spr_player1_up;
+sprite[facing.left] = spr_player1_left;
+sprite[facing.down] = spr_player1_down;
+spritedir = facing.down;
+
 follow_me = true;
 
 </string>

@@ -4,12 +4,12 @@ var _player = argument[0];
 with (_player)
 {
     if (vspd > 0)
-        sprite_index = player_down;
+        spritedir = facing.down;
     else if (vspd < 0)
-        sprite_index = player_up;
+        spritedir = facing.up;
         
     if (hspd > 0)
-        sprite_index = player_right;
+        spritedir = facing.right;
     else if (hspd < 0)
-        sprite_index = player_left;
+        spritedir = facing.left;
 }

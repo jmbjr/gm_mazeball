@@ -8,6 +8,7 @@ enum state{ idle=state_idle,
 enum tiletype{empty, solid};
 enum tiledepth{under=-20, solid=-5, player=-10, shadow=0};
 enum season{spring, summer, fall, winter, num_seasons };
+enum facing{right, up, left, down };
 
 //grid/tile stuf
 global.grid_refresh = true;
