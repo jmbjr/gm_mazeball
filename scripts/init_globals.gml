@@ -35,3 +35,10 @@ global.player[0] = obj_player1;
 global.player[1] = obj_player2;
 global.player[2] = obj_player3;
 global.player[3] = obj_player4;
+
+global.player_is_active[0] = true;
+global.player_is_active[1] = true;
+global.player_is_active[2] = true;
+global.player_is_active[3] = true;
+
+global.maxplayers = 4;

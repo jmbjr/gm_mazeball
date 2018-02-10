@@ -8,7 +8,7 @@
 // BE CONSISTENT!
 
 if (change_view_key)
-    obj_main_camera.target_playerID++;
+    obj_main_camera.target_playerID = get_next_playerID(obj_main_camera.target_playerID);
 
 /// toggle help
 if (keyboard_check_pressed(ord("H")))

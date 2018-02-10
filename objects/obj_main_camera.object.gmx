@@ -61,17 +61,19 @@ far_away = global.cell_size * 8;
           <argument>
             <kind>1</kind>
             <string>/// view following
-target_playerID = wrap(target_playerID, 0, 3);
-var target_object = global.player[target_playerID];
 
-if (abs(x - target_object.x) &gt; far_away || 
-    abs(y - target_object.y) &gt; far_away)
-    move_speed_multiplier = 2;
+var _target_object = global.player[target_playerID];
+var _x_abs_delta = abs(x - _target_object.x);
+var _y_abs_delta = abs(y - _target_object.y);
+var max_abs_delta = max(_x_abs_delta, _y_abs_delta);
+
+if (max_abs_delta &gt; far_away)
+    move_speed_multiplier = max_abs_delta / far_away + 1;
 else
     move_speed_multiplier = 1;
     
-x = approach(x, target_object.x, move_speed * move_speed_multiplier);
-y = approach(y, target_object.y, move_speed * move_speed_multiplier);
+x = approach(x, _target_object.x, move_speed * move_speed_multiplier);
+y = approach(y, _target_object.y, move_speed * move_speed_multiplier);
 
 if (follow_me)
 {
