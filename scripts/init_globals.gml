@@ -10,6 +10,17 @@ enum tiledepth{under=-20, solid=-5, player=-10, shadow=0};
 enum season{spring, summer, fall, winter, num_seasons };
 enum facing{right, up, left, down };
 
+// direction stuff. I know there's a better way to do this...
+global.xoff[facing.right] = 1;
+global.xoff[facing.up] = 0;
+global.xoff[facing.left] = -1;
+global.xoff[facing.down] = 0;
+
+global.yoff[facing.right] = 0;
+global.yoff[facing.up] = -1;
+global.yoff[facing.left] = 0;
+global.yoff[facing.down] = 1;
+
 //grid/tile stuf
 global.grid_refresh = true;
 global.cell_size = 16;

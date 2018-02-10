@@ -32,6 +32,10 @@ dur_max = 0;
 cd_rate = 0;
 target_object = noone;
 
+//cool down tolerances for when to destroy object
+//default to hard cutoff at 0
+cd_tol_min = 0;
+cd_tol_max = 0;
 </string>
           </argument>
         </arguments>
@@ -57,7 +61,8 @@ target_object = noone;
             <string>///handle effect duration
 
 dur -= cd_rate;
-if (dur &lt;=0)
+// default cd_tol_min/max = 0, so normally this is a hard cutoff
+if (dur &lt;=random_range(cd_tol_min, cd_tol_max))
     instance_destroy();
     
 </string>

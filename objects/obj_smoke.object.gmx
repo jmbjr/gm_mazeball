@@ -41,10 +41,16 @@
             <kind>1</kind>
             <string>/// set smoke durations
 
-duration_max = room_speed*3;
-duration = duration_max;
+// for best results keep ratio of dur_max to image_speed 2 to .1
+
+dur_max = room_speed*2;
+dur = dur_max;
 cd_rate = 1;
-image_speed = .2;
+cd_tol_min = 0;
+cd_tol_max = 40;
+image_speed = .1;
+
+
 
 </string>
           </argument>

@@ -54,9 +54,17 @@ target_object.speed_multiplier = 1;
             <string>/// draw effect
 
 //var _pct = dur / dur_max;
+var _xoff = 0;
+var _yoff = 0;
+var dist = global.cell_size / 2;
 
-if (chance(.20))
-    instance_create(target_object.x + random_range(-0.5, 0.5), target_object.y + random_range(-0.5, 0.5), obj_smoke);
+if (chance(0.35))
+{
+    // want smoke to be behind player, so flip sign
+    _xoff = -1 * global.xoff[target_object.spritedir] * dist + random_range(-2, 2);
+    _yoff = -1 * global.yoff[target_object.spritedir] * dist + random_range(-2, 2);    
+    instance_create(target_object.x + _xoff, target_object.y + _yoff, obj_smoke);
+}
 
 </string>
           </argument>
