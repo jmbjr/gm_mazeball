@@ -6,7 +6,7 @@ var _icount = 0;
 
 _next_player = wrap(_next_player, 0, global.maxplayers-1);
 
-while (! global.player_is_active[_next_player])
+while (! global.player[_next_player].visible)
 {
     _next_player++;
     if _icount > global.maxplayers
@@ -16,6 +16,7 @@ while (! global.player_is_active[_next_player])
     }
     else 
         _icount+=1;
+    _next_player = wrap(_next_player, 0, global.maxplayers-1);
 }
 
 return _next_player;

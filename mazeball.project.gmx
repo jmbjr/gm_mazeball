@@ -70,7 +70,6 @@
       <script>scripts\scr_zoom.gml</script>
     </scripts>
     <scripts name="actions">
-      <script>scripts\scr_follow_next_player.gml</script>
       <script>scripts\scr_follow_object.gml</script>
       <script>scripts\scr_follow_me.gml</script>
       <script>scripts\scr_frozen.gml</script>
@@ -82,7 +81,6 @@
     <scripts name="states">
       <script>scripts\state_dash.gml</script>
       <script>scripts\state_idle.gml</script>
-      <script>scripts\state_jump.gml</script>
       <script>scripts\state_move.gml</script>
       <script>scripts\state_frozen.gml</script>
       <script>scripts\state_thaw.gml</script>

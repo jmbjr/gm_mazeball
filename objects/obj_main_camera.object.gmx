@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-99</depth>
   <persistent>0</persistent>
   <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -36,7 +36,7 @@ sprite[facing.down] = noone;
 spritedir = facing.down;
 follow_me = true;
 target_playerID = 0;
-move_speed = 10;
+move_speed = 1000;
 far_away = global.cell_size * 8;
 </string>
           </argument>
