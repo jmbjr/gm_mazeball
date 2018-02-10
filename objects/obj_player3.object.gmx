@@ -46,7 +46,6 @@ sprite[facing.up] = spr_player3_up;
 sprite[facing.left] = spr_player3_left;
 sprite[facing.down] = spr_player3_down;
 spritedir = facing.down;
-follow_me = false;
 </string>
           </argument>
         </arguments>

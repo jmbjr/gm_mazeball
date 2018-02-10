@@ -3,26 +3,12 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-10</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>par_player</parentName>
+  <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>604</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_inherited</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -39,15 +25,72 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// player 1 stats
-playerID = 0;
-sprite[facing.right] = spr_player1_right;
-sprite[facing.up] = spr_player1_up;
-sprite[facing.left] = spr_player1_left;
-sprite[facing.down] = spr_player1_down;
+            <string>/// camera stats
+view_zoom = 1;
+view_max_zoom = 10;
+playerID = -1;
+sprite[facing.right] = noone;
+sprite[facing.up] = noone;
+sprite[facing.left] = noone;
+sprite[facing.down] = noone;
 spritedir = facing.down;
+follow_me = true;
+target_playerID = 0;
+move_speed = 10;
+far_away = global.cell_size * 8;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// view following
+target_playerID = wrap(target_playerID, 0, 3);
+var target_object = global.player[target_playerID];
 
+if (abs(x - target_object.x) &gt; far_away || 
+    abs(y - target_object.y) &gt; far_away)
+    move_speed_multiplier = 2;
+else
+    move_speed_multiplier = 1;
+    
+x = approach(x, target_object.x, move_speed * move_speed_multiplier);
+y = approach(y, target_object.y, move_speed * move_speed_multiplier);
 
+if (follow_me)
+{
+    var zoom_speed = 0.1;
+    view_zoom += keyboard_check(ord("Q"))*zoom_speed;
+    view_zoom -= keyboard_check(ord("E"))*zoom_speed;
+    view_zoom = clamp(view_zoom, 1, view_max_zoom);
+    
+    view_wview = obj_display_manager.ideal_width / view_zoom;
+    view_hview = obj_display_manager.ideal_height / view_zoom;
+    
+    //Center on player
+    view_xview=x-view_wview/2;
+    view_yview=y-view_hview/2;
+    
+    //clamp to room
+    view_xview=clamp(view_xview,0,room_width-view_wview);
+    view_yview=clamp(view_yview,0,room_height-view_hview);
+}
 </string>
           </argument>
         </arguments>

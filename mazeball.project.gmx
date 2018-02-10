@@ -56,6 +56,8 @@
       <script>scripts\display_write_specs.gml</script>
       <script>scripts\chance.gml</script>
       <script>scripts\tile_move.gml</script>
+      <script>scripts\wrap.gml</script>
+      <script>scripts\approach.gml</script>
     </scripts>
     <scripts name="init">
       <script>scripts\init_player.gml</script>
@@ -67,6 +69,7 @@
       <script>scripts\scr_zoom.gml</script>
     </scripts>
     <scripts name="actions">
+      <script>scripts\scr_follow_next_player.gml</script>
       <script>scripts\scr_follow_object.gml</script>
       <script>scripts\scr_follow_me.gml</script>
       <script>scripts\scr_frozen.gml</script>
@@ -104,6 +107,7 @@
       <object>objects\obj_global</object>
       <object>objects\obj_grid</object>
       <object>objects\obj_display_manager</object>
+      <object>objects\obj_main_camera</object>
     </objects>
     <objects name="players">
       <objects name="sprites">
