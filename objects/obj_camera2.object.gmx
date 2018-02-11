@@ -35,8 +35,8 @@ sprite[facing.left] = noone;
 sprite[facing.down] = noone;
 spritedir = facing.down;
 follow_me = true;
-target_playerID = 0;
-view_index=0;
+target_playerID = 1;
+view_index=2;
 move_speed = 20;
 far_away = global.cell_size * 8;
 </string>

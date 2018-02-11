@@ -68,6 +68,7 @@
     <scripts name="display">
       <script>scripts\scr_set_bkg.gml</script>
       <script>scripts\scr_zoom.gml</script>
+      <script>scripts\scr_view_follow.gml</script>
     </scripts>
     <scripts name="actions">
       <script>scripts\scr_follow_object.gml</script>
@@ -107,6 +108,8 @@
       <object>objects\obj_grid</object>
       <object>objects\obj_display_manager</object>
       <object>objects\obj_main_camera</object>
+      <object>objects\obj_camera1</object>
+      <object>objects\obj_camera2</object>
       <object>objects\obj_player_manager</object>
     </objects>
     <objects name="players">

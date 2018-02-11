@@ -61,11 +61,15 @@ if (ideal_width &amp; 1)
 if (ideal_height &amp; 1)
     ideal_height++;
 
+
+    
 for (var i=1; i&lt;=room_last; i++)
 {
     if (room_exists(i))
     {
-        room_set_view(i, 0, true, 0, 0, ideal_width, ideal_height, 0, 0, ideal_width, ideal_height, 0, 0, 0, 0, -1);
+        room_set_view(i, 0, false, 0, 0, ideal_width, ideal_height, 0, 0, ideal_width, ideal_height, 0, 0, 0, 0, -1);
+        room_set_view(i, 1, true, 0, 0,              ideal_width/2, ideal_height, 0, 0,              ideal_width/2, ideal_height, 0, 0, 0, 0, -1);
+        room_set_view(i, 2, true, ideal_width/2, 0,  ideal_width/2, ideal_height, ideal_width/2, 0,  ideal_width/2, ideal_height, 0, 0, 0, 0, -1);
         room_set_view_enabled(i, true);
     }
 }
@@ -166,6 +170,13 @@ if (draw_gui)
     draw_text(5, 35, script_get_name(obj_player1.current_state));
 }
 
+if (global.splitscreen)
+{
+    draw_set_color(c_black);
+    draw_line_width(display_get_gui_width()/2, 0, display_get_gui_width()/2, display_get_gui_height(), 8); 
+}
+
+draw_set_color(c_white);
 draw_set_halign(fa_right);
 draw_set_valign(fa_bottom);
 draw_text(display_get_gui_width()-5, display_get_gui_height()-5, global.season[current_season]);

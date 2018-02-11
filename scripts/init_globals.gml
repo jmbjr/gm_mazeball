@@ -37,3 +37,5 @@ global.player[2] = obj_player3;
 global.player[3] = obj_player4;
 
 global.maxplayers = 4;
+global.splitscreen = true;
+

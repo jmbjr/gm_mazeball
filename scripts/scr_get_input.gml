@@ -22,6 +22,7 @@ if (gamepad_is_connected(playerID))
     yaxis = gamepad_axis_value(playerID, gp_axislv);
     dash_key = gamepad_button_check_pressed(playerID, gp_face1);
     change_view_key = gamepad_button_check_pressed(playerID, gp_shoulderr);
+    test_view_key = gamepad_button_check_pressed(playerID, gp_shoulderl);
     fast_key = gamepad_button_check_pressed(playerID, gp_shoulderrb);
 }
 else
@@ -30,6 +31,7 @@ else
     yaxix=0;
     dash_key=false;
     change_view_key=false;
+    test_view_key = false;
     fast_key=false;
 }
 
