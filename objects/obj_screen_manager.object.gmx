@@ -32,14 +32,14 @@ if (global.screenmode_changed)
     switch (global.screenmode)
     {
         case screen.single:
-            view_visible[0] = true;
-            view_visible[1] = false;
-            view_visible[2] = false;
+            view_visible[view.single] = true;
+            view_visible[view.dual1] = false;
+            view_visible[view.dual2] = false;
             break;
         case screen.dual:
-            view_visible[0] = false;
-            view_visible[1] = true;
-            view_visible[2] = true;
+            view_visible[view.single] = false;
+            view_visible[view.dual1] = true;
+            view_visible[view.dual2] = true;
             break;
         case screen.quad:
             break;       

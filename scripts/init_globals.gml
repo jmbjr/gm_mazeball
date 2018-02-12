@@ -10,6 +10,7 @@ enum tiledepth{under=-20, solid=-5, player=-10, shadow=0};
 enum season{spring, summer, fall, winter, num_seasons };
 enum facing{right, up, left, down };
 enum screen{single, dual, quad, num_modes };
+enum view{single, quad1, quad2, quad3, quad4, dual1, dual2};
 
 // direction stuff. I know there's a better way to do this...
 global.xoff[facing.right] = 1;
