@@ -9,6 +9,7 @@ enum tiletype{empty, solid};
 enum tiledepth{under=-20, solid=-5, player=-10, shadow=0};
 enum season{spring, summer, fall, winter, num_seasons };
 enum facing{right, up, left, down };
+enum screen{single, dual, quad, num_modes };
 
 // direction stuff. I know there's a better way to do this...
 global.xoff[facing.right] = 1;
@@ -37,5 +38,5 @@ global.player[2] = obj_player3;
 global.player[3] = obj_player4;
 
 global.maxplayers = 4;
-global.splitscreen = true;
+global.screenmode = screen.dual;
 

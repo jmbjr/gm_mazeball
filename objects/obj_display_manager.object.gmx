@@ -170,7 +170,13 @@ if (draw_gui)
     draw_text(5, 35, script_get_name(obj_player1.current_state));
 }
 
-if (global.splitscreen)
+if (global.screenmode == screen.dual)
+{
+    draw_set_color(c_black);
+    draw_line_width(display_get_gui_width()/2, 0, display_get_gui_width()/2, display_get_gui_height(), 8);
+}
+
+if (global.screenmode == screen.quad)
 {
     draw_set_color(c_black);
     draw_line_width(display_get_gui_width()/2, 0, display_get_gui_width()/2, display_get_gui_height(), 8); 
