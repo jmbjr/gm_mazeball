@@ -8,7 +8,7 @@
 // BE CONSISTENT!
 
 if (change_view_key)
-    obj_main_camera.target_playerID = get_next_playerID(obj_main_camera.target_playerID);      
+    par_camera.target_playerID = get_next_playerID(par_camera.target_playerID);      
 
 if (test_view_key)
 {

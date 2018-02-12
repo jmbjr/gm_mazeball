@@ -5,10 +5,24 @@
   <visible>-1</visible>
   <depth>-99</depth>
   <persistent>-1</persistent>
-  <parentName>self</parentName>
+  <parentName>par_camera</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>604</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_inherited</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -26,70 +40,10 @@
           <argument>
             <kind>1</kind>
             <string>/// camera stats
-view_zoom = 1;
-view_max_zoom = 10;
-playerID = -1;
-sprite[facing.right] = noone;
-sprite[facing.up] = noone;
-sprite[facing.left] = noone;
-sprite[facing.down] = noone;
-spritedir = facing.down;
-follow_me = true;
 target_playerID = 0;
 view_index=view.dual1;
-move_speed = 20;
-far_away = global.cell_size * 8;
 ideal_view_width = obj_display_manager.ideal_width/2;
 ideal_view_height = obj_display_manager.ideal_height;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// view following
-
-var _target_object = global.player[target_playerID];
-var _x_abs_delta = abs(x - _target_object.x);
-var _y_abs_delta = abs(y - _target_object.y);
-var max_abs_delta = max(_x_abs_delta, _y_abs_delta);
-var _old_speed = move_speed;
-
-if (max_abs_delta &gt; far_away)
-    move_speed_multiplier = max_abs_delta / far_away + 1;
-else
-    move_speed_multiplier = 1;
-
-// handle -speed which means MOVE FAST
-if (move_speed&lt;0)
-{
-    _old_speed = move_speed * -1;
-    move_speed = 1000;
-}
-        
-x = approach(x, _target_object.x, move_speed * move_speed_multiplier);
-y = approach(y, _target_object.y, move_speed * move_speed_multiplier);
-
-move_speed = _old_speed;
-
-if (follow_me)
-    scr_view_follow();
 </string>
           </argument>
         </arguments>
