@@ -10,6 +10,15 @@
 if (change_view_key)
     obj_main_camera.target_playerID = get_next_playerID(obj_main_camera.target_playerID);      
 
+if (test_view_key)
+{
+    if (global.screenmode = screen.dual)
+        global.screenmode = screen.single;    
+    else
+        global.screenmode = screen.dual
+    
+    global.screenmode_changed = true;
+}
 /// toggle help
 if (keyboard_check_pressed(ord("H")))
 {

@@ -7,8 +7,9 @@ view_zoom += keyboard_check(ord("Q"))*zoom_speed;
 view_zoom -= keyboard_check(ord("E"))*zoom_speed;
 view_zoom = clamp(view_zoom, 1, view_max_zoom);
 
-view_wview[view_index] = obj_display_manager.ideal_width/2 / view_zoom;
-view_hview[view_index] = obj_display_manager.ideal_height / view_zoom;
+
+view_wview[view_index] = ideal_view_width / view_zoom;
+view_hview[view_index] = ideal_view_height / view_zoom;
 
 //Center on player
 view_xview[view_index]=x-view_wview[view_index]/2;

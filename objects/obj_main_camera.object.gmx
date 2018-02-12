@@ -39,6 +39,9 @@ target_playerID = 0;
 view_index=0;
 move_speed = 20;
 far_away = global.cell_size * 8;
+ideal_view_width = obj_display_manager.ideal_width;
+ideal_view_height = obj_display_manager.ideal_height;
+
 </string>
           </argument>
         </arguments>
