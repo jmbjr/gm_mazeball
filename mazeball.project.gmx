@@ -104,12 +104,13 @@
   </fonts>
   <objects name="objects">
     <objects name="game">
-      <object>objects\obj_global</object>
-      <object>objects\obj_grid</object>
-      <object>objects\obj_display_manager</object>
       <object>objects\par_camera</object>
+      <object>objects\obj_camera_full</object>
       <object>objects\obj_camera1</object>
       <object>objects\obj_camera2</object>
+      <object>objects\obj_display_manager</object>
+      <object>objects\obj_global</object>
+      <object>objects\obj_grid</object>
       <object>objects\obj_player_manager</object>
       <object>objects\obj_screen_manager</object>
     </objects>

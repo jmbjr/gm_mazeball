@@ -39,8 +39,8 @@ target_playerID = 0;
 view_index=view.single;
 move_speed = 20;
 far_away = global.cell_size * 8;
-ideal_view_width = obj_display_manager.ideal_width;
-ideal_view_height = obj_display_manager.ideal_height;
+ideal_view_width = 0;
+ideal_view_height = 0;
 
 </string>
           </argument>
@@ -88,6 +88,25 @@ x = approach(x, _target_object.x, move_speed * move_speed_multiplier);
 y = approach(y, _target_object.y, move_speed * move_speed_multiplier);
 
 move_speed = _old_speed;
+
+// ensure we properly scale the view
+/// handle ideal_view_width/height
+
+switch (global.screenmode)
+{
+    case screen.single:
+        ideal_view_width = obj_display_manager.ideal_width;
+        ideal_view_height = obj_display_manager.ideal_height;
+        break;
+    case screen.dual:
+        ideal_view_width = obj_display_manager.ideal_width/2;
+        ideal_view_height = obj_display_manager.ideal_height;
+        break;
+    case screen.quad:
+        ideal_view_width = obj_display_manager.ideal_width/2;
+        ideal_view_height = obj_display_manager.ideal_height/2;
+        break;
+}
 
 if (follow_me)
     scr_view_follow();

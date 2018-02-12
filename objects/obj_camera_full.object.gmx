@@ -40,8 +40,8 @@
           <argument>
             <kind>1</kind>
             <string>/// camera stats
-target_playerID = 1;
-view_index=view.dual2;
+target_playerID = 0;
+view_index=view.single;
 
 </string>
           </argument>
