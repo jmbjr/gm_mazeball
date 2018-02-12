@@ -5,45 +5,9 @@
   <visible>-1</visible>
   <depth>-99</depth>
   <persistent>-1</persistent>
-  <parentName>self</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// camera stats
-view_zoom = 1;
-view_max_zoom = 10;
-playerID = -1;
-sprite[facing.right] = noone;
-sprite[facing.up] = noone;
-sprite[facing.left] = noone;
-sprite[facing.down] = noone;
-spritedir = facing.down;
-follow_me = true;
-target_playerID = 1;
-view_index=2;
-move_speed = 20;
-far_away = global.cell_size * 8;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -61,33 +25,63 @@ far_away = global.cell_size * 8;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// view following
+            <string>/// properly manage screen modes
 
-var _target_object = global.player[target_playerID];
-var _x_abs_delta = abs(x - _target_object.x);
-var _y_abs_delta = abs(y - _target_object.y);
-var max_abs_delta = max(_x_abs_delta, _y_abs_delta);
-var _old_speed = move_speed;
-
-if (max_abs_delta &gt; far_away)
-    move_speed_multiplier = max_abs_delta / far_away + 1;
-else
-    move_speed_multiplier = 1;
-
-// handle -speed which means MOVE FAST
-if (move_speed&lt;0)
+if (global.screenmode_changed)
 {
-    _old_speed = move_speed * -1;
-    move_speed = 1000;
+    switch (global.screenmode)
+    {
+        case screen.single:
+            view_visible[0] = true;
+            view_visible[1] = false;
+            view_visible[2] = false;
+            break;
+        case screen.dual:
+            view_visible[0] = false;
+            view_visible[1] = true;
+            view_visible[2] = true;
+            break;
+        case screen.quad:
+            break;       
+    }
+    global.screenmode_changed = false;
 }
-        
-x = approach(x, _target_object.x, move_speed * move_speed_multiplier);
-y = approach(y, _target_object.y, move_speed * move_speed_multiplier);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// draw GUI stuff for split screen modes
+if (global.screenmode == screen.dual)
+{
+    draw_set_color(c_black);
+    draw_line_width(display_get_gui_width()/2, 0, display_get_gui_width()/2, display_get_gui_height(), 8); 
+}
 
-move_speed = _old_speed;
+if (global.screenmode == screen.quad)
+{
+    draw_set_color(c_black);
+    draw_line_width(display_get_gui_width()/2, 0, display_get_gui_width()/2, display_get_gui_height(), 8); 
+}
 
-if (follow_me)
-    scr_view_follow();
+
 </string>
           </argument>
         </arguments>

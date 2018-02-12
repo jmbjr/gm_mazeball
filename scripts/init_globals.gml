@@ -39,4 +39,5 @@ global.player[3] = obj_player4;
 
 global.maxplayers = 4;
 global.screenmode = screen.dual;
+global.screenmode_changed = false;
 

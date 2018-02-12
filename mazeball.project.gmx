@@ -111,6 +111,7 @@
       <object>objects\obj_camera1</object>
       <object>objects\obj_camera2</object>
       <object>objects\obj_player_manager</object>
+      <object>objects\obj_screen_manager</object>
     </objects>
     <objects name="players">
       <objects name="sprites">
