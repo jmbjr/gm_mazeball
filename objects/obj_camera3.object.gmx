@@ -4,11 +4,25 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>-99</depth>
-  <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <persistent>-1</persistent>
+  <parentName>par_camera</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="3" enumb="0">
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>604</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_inherited</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,31 +39,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// check to see if players are active. if not, disable them
-
-var iiplayer = 0;
-/**
-for (iiplayer = 0; iiplayer &lt; global.maxplayers; iiplayer++)
-{
-    if (!gamepad_is_connected(iiplayer)) 
-    {
-        if (global.player[iiplayer]) // only bother turning off if already on
-        {
-            global.player[iiplayer].visible = false;
-            global.screenmode_changed = true;
-        }
-    }
-    else
-    {
-        if (!global.player[iiplayer]) // only bother turning back on if already off
-        {
-            global.player[iiplayer].visible = true;
-            global.screenmode_changed = true;
-        }
-    }
-}
-**/
-    
+            <string>/// camera stats
+target_playerID = 2;
+view_index=view.quad3;
 
 </string>
           </argument>

@@ -69,6 +69,7 @@
       <script>scripts\scr_set_bkg.gml</script>
       <script>scripts\scr_zoom.gml</script>
       <script>scripts\scr_view_follow.gml</script>
+      <script>scripts\toggle_player_visibility.gml</script>
     </scripts>
     <scripts name="actions">
       <script>scripts\scr_follow_object.gml</script>
@@ -104,15 +105,17 @@
   </fonts>
   <objects name="objects">
     <objects name="game">
+      <object>objects\obj_screen_manager</object>
       <object>objects\par_camera</object>
       <object>objects\obj_camera_full</object>
       <object>objects\obj_camera1</object>
       <object>objects\obj_camera2</object>
+      <object>objects\obj_camera3</object>
+      <object>objects\obj_camera4</object>
       <object>objects\obj_display_manager</object>
       <object>objects\obj_global</object>
       <object>objects\obj_grid</object>
       <object>objects\obj_player_manager</object>
-      <object>objects\obj_screen_manager</object>
     </objects>
     <objects name="players">
       <objects name="sprites">

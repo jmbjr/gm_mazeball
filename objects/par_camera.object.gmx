@@ -98,13 +98,10 @@ switch (global.screenmode)
         ideal_view_width = obj_display_manager.ideal_width;
         ideal_view_height = obj_display_manager.ideal_height;
         break;
-    case screen.dual:
-        ideal_view_width = obj_display_manager.ideal_width/2;
-        ideal_view_height = obj_display_manager.ideal_height;
-        break;
-    case screen.quad:
-        ideal_view_width = obj_display_manager.ideal_width/global.quadcols;
-        ideal_view_height = obj_display_manager.ideal_height/global.quadrows;
+        
+    case screen.split:
+        ideal_view_width = obj_display_manager.ideal_width/global.splitcols;
+        ideal_view_height = obj_display_manager.ideal_height/global.splitrows;
         break;
 }
 

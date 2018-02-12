@@ -32,8 +32,8 @@ var _col2=false;
 var _row1=false;
 var _row2=false;
 
-// figure out how many quad rows and cols
-// Future opportunity for simplication!
+// figure out how many rows and cols for split screen
+// Future opportunity for simplication!  should just check this for split screen
 
 if (global.player[0].visible || global.player[2].visible) //first column visible
     _col1=true;
@@ -48,34 +48,40 @@ if (global.player[2].visible || global.player[3].visible) //second column visibl
     _row2=true;
         
 if (_col1 &amp;&amp; _col2)
-    global.quadcols = 2;
+    global.splitcols = 2;
 else
-    global.quadcols = 1;
+    global.splitcols = 1;
 
 if (_row1 &amp;&amp; _row2)
-    global.quadrows = 2;
+    global.splitrows = 2;
 else
-    global.quadrows = 1;
+    global.splitrows = 1;
 
 
 if (global.screenmode_changed)
 {
+    view_visible[view.single] = false;
+    view_visible[view.quad1] = false;
+    view_visible[view.quad2] = false;
+    view_visible[view.quad3] = false;
+    view_visible[view.quad4] = false;
+    
     switch (global.screenmode)
     {
         case screen.single:
             view_visible[view.single] = true;
-            view_visible[view.quad1] = false;
-            view_visible[view.quad2] = false;
             break;
-        case screen.dual:
-            view_visible[view.single] = false;
-            view_visible[view.quad1] = true;
-            view_visible[view.quad2] = true;
-            break;
-        case screen.quad:
-            view_visible[view.single] = false;
-            view_visible[view.quad1] = true;
-            view_visible[view.quad2] = true;
+        
+        // refactor this so that quad1/2/3/4 are views 0/1/2/3    
+        case screen.split:
+            if (global.player[0].visible) 
+                view_visible[view.quad1] = true;
+            if (global.player[1].visible) 
+                view_visible[view.quad2] = true;
+            if (global.player[2].visible) 
+                view_visible[view.quad3] = true;
+            if (global.player[3].visible) 
+                view_visible[view.quad4] = true;
             break;      
     }
     global.screenmode_changed = false;
@@ -103,16 +109,15 @@ if (global.screenmode_changed)
           <argument>
             <kind>1</kind>
             <string>/// draw GUI stuff for split screen modes
-if (global.screenmode == screen.dual)
-{
-    draw_set_color(c_black);
-    draw_line_width(display_get_gui_width()/2, 0, display_get_gui_width()/2, display_get_gui_height(), 8); 
-}
 
-if (global.screenmode == screen.quad)
+if (global.screenmode == screen.split)
 {
     draw_set_color(c_black);
-    draw_line_width(display_get_gui_width()/2, 0, display_get_gui_width()/2, display_get_gui_height(), 8); 
+    if (global.splitcols == 2)
+        draw_line_width(display_get_gui_width()/2, 0, display_get_gui_width()/2, display_get_gui_height(), 8); 
+    if (global.splitrows == 2)
+        draw_line_width(0, display_get_gui_height()/2, display_get_gui_width(), display_get_gui_height()/2, 8); 
+
 }
 
 

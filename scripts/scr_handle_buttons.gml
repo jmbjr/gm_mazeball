@@ -10,12 +10,18 @@
 if (change_view_key)
     obj_camera_full.target_playerID = get_next_playerID(obj_camera_full.target_playerID);      
 
+if ((keyboard_check_pressed(ord("Y")) && playerID == 0) ||
+    (keyboard_check_pressed(ord("U")) && playerID == 1) ||
+    (keyboard_check_pressed(ord("I")) && playerID == 2) ||
+    (keyboard_check_pressed(ord("O")) && playerID == 3))
+    toggle_player_visibility(playerID);
+                
 if (test_view_key)
 {
-    if (global.screenmode = screen.quad)
+    if (global.screenmode = screen.split)
         global.screenmode = screen.single;    
     else
-        global.screenmode = screen.quad
+        global.screenmode = screen.split
     
     global.screenmode_changed = true;
 }
