@@ -37,6 +37,8 @@ for (iiplayer = 0; iiplayer &lt; global.maxplayers; iiplayer++)
         global.player[iiplayer].visible = true;
 }
 
+    
+
 </string>
           </argument>
         </arguments>

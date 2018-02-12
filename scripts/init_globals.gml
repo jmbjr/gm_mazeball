@@ -39,6 +39,7 @@ global.player[2] = obj_player3;
 global.player[3] = obj_player4;
 
 global.maxplayers = 4;
-global.screenmode = screen.dual;
+global.screenmode = screen.quad;
 global.screenmode_changed = false;
-
+global.quadrows = 0; //how many rows for quad screen
+global.quadcols = 0; //how many rows for quad screen

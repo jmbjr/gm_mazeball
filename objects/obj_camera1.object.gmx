@@ -41,7 +41,7 @@
             <kind>1</kind>
             <string>/// camera stats
 target_playerID = 0;
-view_index=view.dual1;
+view_index=view.quad1;
 
 </string>
           </argument>

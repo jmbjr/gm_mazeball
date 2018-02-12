@@ -12,10 +12,10 @@ if (change_view_key)
 
 if (test_view_key)
 {
-    if (global.screenmode = screen.dual)
+    if (global.screenmode = screen.quad)
         global.screenmode = screen.single;    
     else
-        global.screenmode = screen.dual
+        global.screenmode = screen.quad
     
     global.screenmode_changed = true;
 }

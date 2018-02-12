@@ -27,22 +27,56 @@
             <kind>1</kind>
             <string>/// properly manage screen modes
 
+var _col1=false;
+var _col2=false;
+var _row1=false;
+var _row2=false;
+
+// figure out how many quad rows and cols
+// Future opportunity for simplication!
+
+if (global.player[0].visible || global.player[2].visible) //first column visible
+    _col1=true;
+
+if (global.player[1].visible || global.player[3].visible) //second column visible
+    _col2=true;
+   
+if (global.player[0].visible || global.player[1].visible) //first row visible
+    _row1=true;
+
+if (global.player[2].visible || global.player[3].visible) //second column visible
+    _row2=true;
+        
+if (_col1 &amp;&amp; _col2)
+    global.quadcols = 2;
+else
+    global.quadcols = 1;
+
+if (_row1 &amp;&amp; _row2)
+    global.quadrows = 2;
+else
+    global.quadrows = 1;
+
+
 if (global.screenmode_changed)
 {
     switch (global.screenmode)
     {
         case screen.single:
             view_visible[view.single] = true;
-            view_visible[view.dual1] = false;
-            view_visible[view.dual2] = false;
+            view_visible[view.quad1] = false;
+            view_visible[view.quad2] = false;
             break;
         case screen.dual:
             view_visible[view.single] = false;
-            view_visible[view.dual1] = true;
-            view_visible[view.dual2] = true;
+            view_visible[view.quad1] = true;
+            view_visible[view.quad2] = true;
             break;
         case screen.quad:
-            break;       
+            view_visible[view.single] = false;
+            view_visible[view.quad1] = true;
+            view_visible[view.quad2] = true;
+            break;      
     }
     global.screenmode_changed = false;
 }
