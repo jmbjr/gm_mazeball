@@ -3,7 +3,7 @@
   <spriteName>spr_crown</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-9</depth>
+  <depth>-11</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -29,12 +29,13 @@
 
 image_speed = 0.2;
 draw_bbox = true;
+pickedup = false;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_player2">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -51,47 +52,24 @@ draw_bbox = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// make player it
-with (instance_create(x, y, obj_it))
+            <string>/// collision checker
+if (!pickedup)
 {
-    dur=100;
-    dur_max = 100;
-    cd_rate = 0; //infinite
-    target_object = other;
+    var _p;
+    _p = instance_place(x, y, par_player);
+    if _p != noone
+    {
+        with (instance_create(x, y, obj_it))
+        {
+            dur=100;
+            dur_max = 100;
+            cd_rate = 0; //infinite
+            target_instance = _p;
+            crown = other;
+        }
+        pickedup = true;
+    }
 }
-
-instance_destroy();
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>draw_self();
-if (draw_bbox)
-{
-    draw_set_alpha(0.5);
-    draw_rectangle_colour(bbox_left,bbox_top,bbox_right,bbox_bottom,c_red,c_red,c_red,c_red,false);
-    draw_set_alpha(1);    
-}
-
 </string>
           </argument>
         </arguments>

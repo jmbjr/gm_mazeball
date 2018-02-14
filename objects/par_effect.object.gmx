@@ -30,7 +30,7 @@
 dur=0;
 dur_max = 0;
 cd_rate = 0;
-target_object = noone;
+target_instance = noone;
 
 //cool down tolerances for when to destroy object
 //default to hard cutoff at 0

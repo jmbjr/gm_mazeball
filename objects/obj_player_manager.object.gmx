@@ -28,10 +28,13 @@
             <string>/// check to see if players are active. if not, disable them
 
 var iiplayer = 0;
-/**
+
 for (iiplayer = 0; iiplayer &lt; global.maxplayers; iiplayer++)
 {
-    if (!gamepad_is_connected(iiplayer)) 
+    if (object_exists(global.player[iiplayer])) // means global.player is an object. get instance. assume one
+        global.player[iiplayer] = instance_find(global.player[iiplayer], 0);
+    
+    /**if (!gamepad_is_connected(iiplayer)) 
     {
         if (global.player[iiplayer]) // only bother turning off if already on
         {
@@ -47,8 +50,9 @@ for (iiplayer = 0; iiplayer &lt; global.maxplayers; iiplayer++)
             global.screenmode_changed = true;
         }
     }
+    **/
 }
-**/
+
     
 
 </string>
