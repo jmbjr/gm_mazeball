@@ -131,12 +131,7 @@ for (_iiplayer=0; _iiplayer&lt;global.maxplayers; _iiplayer++)
             <kind>1</kind>
             <string>/// draw crown
 if (target_instance.visible)
-{
-    crown.x = target_instance.x;
-    crown.y = target_instance.y;
-    crown.image_index = target_instance.image_index;
-    crown.image_speed = target_instance.image_speed;
-}
+    sync_objects(target_instance, crown);
 </string>
           </argument>
         </arguments>

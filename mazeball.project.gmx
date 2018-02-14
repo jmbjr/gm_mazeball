@@ -62,6 +62,7 @@
       <script>scripts\wrap.gml</script>
       <script>scripts\approach.gml</script>
       <script>scripts\get_next_playerID.gml</script>
+      <script>scripts\sync_objects.gml</script>
     </scripts>
     <scripts name="init">
       <script>scripts\init_player.gml</script>
