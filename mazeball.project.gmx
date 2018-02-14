@@ -33,6 +33,9 @@
       </sprites>
       <sprite>sprites\spr_player_shadow</sprite>
       <sprite>sprites\spr_player</sprite>
+      <sprites name="accessories">
+        <sprite>sprites\spr_crown</sprite>
+      </sprites>
     </sprites>
     <sprites name="tiles">
       <sprite>sprites\spr_wall</sprite>
@@ -139,6 +142,10 @@
         <object>objects\par_effect</object>
         <object>objects\obj_effect_fast</object>
         <object>objects\obj_smoke</object>
+        <object>objects\obj_it</object>
+      </objects>
+      <objects name="items">
+        <object>objects\obj_crown</object>
       </objects>
     </objects>
     <objects name="tiles">
