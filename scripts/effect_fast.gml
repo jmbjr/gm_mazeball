@@ -9,7 +9,7 @@ if (_player.speed_multiplier == 1) // only allow fast if not already faster
     var obj = instance_create(0,0,obj_effect_fast);
     
     obj.target_instance = _player;
-    obj.dur_max = room_speed * 10;
+    obj.dur_max = room_speed * 6;
     obj.cd_rate = 5;
     obj.dur = obj.dur_max;
 }

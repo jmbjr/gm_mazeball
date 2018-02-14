@@ -6,8 +6,8 @@ speed_multiplier = 1;
 
 //I think I need a proper data structure for these states
 //dash
-dash_speed = walking_speed * 4;
-dur_dash_max = room_speed*1.5;
+dash_speed = walking_speed * 6;
+dur_dash_max = room_speed / 2;
 dur_dash = 0;
 cd_rate_dash = 5;
 
