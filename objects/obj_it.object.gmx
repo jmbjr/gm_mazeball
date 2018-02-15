@@ -87,7 +87,7 @@ crown = 0;
 var _iiplayer;
 var _p;
 var _c;
-
+var _rand_loc;
 for (_iiplayer=0; _iiplayer&lt;global.maxplayers; _iiplayer++) 
 {
     _p = global.player[_iiplayer];
@@ -98,8 +98,10 @@ for (_iiplayer=0; _iiplayer&lt;global.maxplayers; _iiplayer++)
             _c = instance_place(x, y, obj_crown);
             if (_c != noone) //the crown is here, _p takes it and becomes 'it' and pushes 
             {
-                other.target_instance.x = 400;
-                other.target_instance.y = 200;
+                _rand_loc = get_safe_random_location(tiledepth.solid);
+                
+                other.target_instance.x = _rand_loc[0];
+                other.target_instance.y = _rand_loc[1];
                 other.target_instance = _p;
                 break;
             }

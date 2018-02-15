@@ -67,7 +67,7 @@
     <instance objName="obj_screen_manager" x="288" y="32" name="inst_C8696195" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_camera3" x="288" y="128" name="inst_4E3A4B57" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_camera4" x="288" y="144" name="inst_1B4F9CDB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_crown" x="448" y="48" name="inst_657A4226" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_item_manager" x="288" y="160" name="inst_649BC4DD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tile_bush" x="32" y="0" w="32" h="32" xo="0" yo="0" id="10000019" name="inst_C3E09652" depth="-5" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

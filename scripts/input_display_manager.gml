@@ -33,7 +33,7 @@ if (keyboard_check_pressed(ord("V")))
 if (keyboard_check_pressed(ord("B")))
 {
     current_season++;
-    if (current_season>=season.num_seasons || current_season<0)
+    if (current_season>=season.count || current_season<0)
         current_season = 0; 
     scr_set_bkg(current_season);
 }

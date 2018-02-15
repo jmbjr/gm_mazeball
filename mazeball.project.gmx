@@ -63,6 +63,7 @@
       <script>scripts\approach.gml</script>
       <script>scripts\get_next_playerID.gml</script>
       <script>scripts\sync_objects.gml</script>
+      <script>scripts\get_safe_random_location.gml</script>
     </scripts>
     <scripts name="init">
       <script>scripts\init_player.gml</script>
@@ -147,6 +148,7 @@
       </objects>
       <objects name="items">
         <object>objects\obj_crown</object>
+        <object>objects\obj_item_manager</object>
       </objects>
     </objects>
     <objects name="tiles">

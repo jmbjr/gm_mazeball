@@ -7,10 +7,11 @@ enum state{ idle=state_idle,
 
 enum tiletype{empty, solid};
 enum tiledepth{under=-20, solid=-5, player=-10, shadow=0};
-enum season{spring, summer, fall, winter, num_seasons };
+enum season{spring, summer, fall, winter, count };
 enum facing{right, up, left, down };
-enum screen{single, split, num_modes };
+enum screen{single, split, count };
 enum view{single, quad1, quad2, quad3, quad4};
+enum random_item{obj_crown, count};
 
 // direction stuff. I know there's a better way to do this...
 global.xoff[facing.right] = 1;
