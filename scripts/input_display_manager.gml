@@ -29,15 +29,6 @@ if (keyboard_check_pressed(ord("V")))
     }
 }
 
-//toggle seasons
-if (keyboard_check_pressed(ord("B")))
-{
-    current_season++;
-    if (current_season>=season.count || current_season<0)
-        current_season = 0; 
-    scr_set_bkg(current_season);
-}
-
 // handle drawing GUI HUD
 if (keyboard_check_pressed(ord("G")))
 {

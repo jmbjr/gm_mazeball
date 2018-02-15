@@ -32,7 +32,7 @@ ideal_height= 247;
 zoom = 1;
 max_zoom = 1;
 selected_view = display.view;
-current_season = season.spring;
+global.current_season = season.spring;
 draw_gui = false;
 
 // get and enforce aspect ratio
@@ -85,7 +85,7 @@ alarm[0]=1;
 room_goto(room_next(room));
 //increase zoom by default
 scr_zoom();
-scr_set_bkg(current_season);
+scr_set_bkg(global.current_season);
 
 </string>
           </argument>
@@ -176,7 +176,7 @@ if (draw_gui)
 draw_set_color(c_white);
 draw_set_halign(fa_right);
 draw_set_valign(fa_bottom);
-draw_text(display_get_gui_width()-5, display_get_gui_height()-5, global.season[current_season]);
+draw_text(display_get_gui_width()-5, display_get_gui_height()-5, global.season[global.current_season]);
 
 </string>
           </argument>

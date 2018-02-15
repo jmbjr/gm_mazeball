@@ -33,6 +33,7 @@ global.season[season.spring] = "Spring";
 global.season[season.summer] = "Summer";
 global.season[season.fall] = "Fall";
 global.season[season.winter] = "Winter";
+global.current_season = season.spring;
 
 global.player[0] = obj_player1;
 global.player[1] = obj_player2;

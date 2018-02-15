@@ -103,6 +103,7 @@ for (_iiplayer=0; _iiplayer&lt;global.maxplayers; _iiplayer++)
                 other.target_instance.x = _rand_loc[0];
                 other.target_instance.y = _rand_loc[1];
                 other.target_instance = _p;
+                _p.crowned ++; //maybe should be in obj_crown
                 break;
             }
         }

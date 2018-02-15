@@ -104,6 +104,7 @@
     <scripts name="effects">
       <script>scripts\effect_fast.gml</script>
     </scripts>
+    <script>scripts\set_next_season.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_basic</font>
@@ -121,6 +122,7 @@
       <object>objects\obj_global</object>
       <object>objects\obj_grid</object>
       <object>objects\obj_player_manager</object>
+      <object>objects\obj_weather_manager</object>
     </objects>
     <objects name="players">
       <objects name="sprites">

@@ -18,6 +18,8 @@ cd_rate_frozen = 5;
 
 dur_help = room_speed * 4;
 
+//score
+crowned = 0;
 
 view_zoom = 1;
 view_max_zoom = 10;
