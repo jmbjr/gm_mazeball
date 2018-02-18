@@ -152,6 +152,7 @@
         <object>objects\obj_it</object>
       </objects>
       <objects name="items">
+        <object>objects\par_item</object>
         <object>objects\obj_crown</object>
         <object>objects\obj_item_manager</object>
         <object>objects\obj_icecube</object>
