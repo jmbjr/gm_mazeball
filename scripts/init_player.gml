@@ -18,6 +18,8 @@ cd_rate_frozen = 5;
 
 dur_help = room_speed * 4;
 
+hastecharges = 0;
+
 //score
 crowned = 0;
 

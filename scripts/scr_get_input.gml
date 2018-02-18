@@ -32,7 +32,7 @@ else
     dash_key=false;
     change_view_key=false;
     test_view_key = false;
-    fast_key=false;
+    fast_key = false;
 }
 
 

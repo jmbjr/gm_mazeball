@@ -33,9 +33,6 @@ if (keyboard_check_pressed(ord("H")))
     else
         show_help = true;
 }
-// test status effect
-if (fast_key)
-    effect_fast(global.player[playerID]);
     
 // draw BBOXES
 if (keyboard_check_pressed(ord("P")))
@@ -64,16 +61,8 @@ if (dash_key)
              // seems like I should use case/switch
 }
 
-// set frozen state
-if (keyboard_check_pressed(ord("F")))
-{
-    if (current_state != state.frozen)
-    {
-        current_state = state.frozen;
-        dur_frozen = dur_frozen_max;
-        return 0;
-    }     
-}
-
+// test status effect
+if (fast_key)
+    effect_fast(global.player[playerID]);
 
     

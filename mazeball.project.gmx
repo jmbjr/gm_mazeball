@@ -155,6 +155,7 @@
         <object>objects\obj_crown</object>
         <object>objects\obj_item_manager</object>
         <object>objects\obj_icecube</object>
+        <object>objects\obj_haste</object>
       </objects>
     </objects>
     <objects name="tiles">

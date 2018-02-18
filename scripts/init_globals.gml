@@ -11,13 +11,16 @@ enum season{spring, summer, fall, winter, count };
 enum facing{right, up, left, down };
 enum screen{single, split, count };
 enum view{single, quad1, quad2, quad3, quad4};
-enum item{crown, icecube, count};
+enum item{crown, icecube, haste, count};
 
 global.itemobj[item.crown] = obj_crown;
 global.itemobj[item.icecube] = obj_icecube;
+global.itemobj[item.haste] = obj_haste;
 
 global.maxitems[item.crown] = 1;
-global.maxitems[item.icecube] = 3;
+global.maxitems[item.icecube] = 2;
+global.maxitems[item.haste] = 5;
+
 //enum random_item{obj_crown, count};
 
 // direction stuff. I know there's a better way to do this...
