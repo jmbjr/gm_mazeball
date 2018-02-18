@@ -33,9 +33,6 @@
       </sprites>
       <sprite>sprites\spr_player_shadow</sprite>
       <sprite>sprites\spr_player</sprite>
-      <sprites name="accessories">
-        <sprite>sprites\spr_crown</sprite>
-      </sprites>
     </sprites>
     <sprites name="tiles">
       <sprite>sprites\spr_wall</sprite>
@@ -43,6 +40,12 @@
     </sprites>
     <sprites name="effects">
       <sprite>sprites\spr_smoke</sprite>
+    </sprites>
+    <sprites name="items">
+      <sprites name="accessories">
+        <sprite>sprites\spr_crown</sprite>
+      </sprites>
+      <sprite>sprites\spr_icecube</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -151,6 +154,7 @@
       <objects name="items">
         <object>objects\obj_crown</object>
         <object>objects\obj_item_manager</object>
+        <object>objects\obj_icecube</object>
       </objects>
     </objects>
     <objects name="tiles">

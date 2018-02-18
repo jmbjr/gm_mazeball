@@ -28,11 +28,8 @@
             <string>/// initialization
 
 image_speed = 0.2;
-draw_bbox = true;
 pickedup = false;
 
-base_x = 400;
-base_y = 400;
 </string>
           </argument>
         </arguments>

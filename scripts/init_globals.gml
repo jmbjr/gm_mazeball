@@ -11,7 +11,14 @@ enum season{spring, summer, fall, winter, count };
 enum facing{right, up, left, down };
 enum screen{single, split, count };
 enum view{single, quad1, quad2, quad3, quad4};
-enum random_item{obj_crown, count};
+enum item{crown, icecube, count};
+
+global.itemobj[item.crown] = obj_crown;
+global.itemobj[item.icecube] = obj_icecube;
+
+global.maxitems[item.crown] = 1;
+global.maxitems[item.icecube] = 3;
+//enum random_item{obj_crown, count};
 
 // direction stuff. I know there's a better way to do this...
 global.xoff[facing.right] = 1;
@@ -45,3 +52,6 @@ global.screenmode = screen.split;
 global.screenmode_changed = false;
 global.splitrows = 0; //how many rows for split screen
 global.splitcols = 0; //how many rows for split screen
+
+
+
