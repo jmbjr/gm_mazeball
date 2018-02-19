@@ -41,6 +41,7 @@
             <kind>1</kind>
             <string>/// player 3 stats
 playerID = 2;
+playerSlot = 3;
 sprite[facing.right] = spr_player3_right;
 sprite[facing.up] = spr_player3_up;
 sprite[facing.left] = spr_player3_left;

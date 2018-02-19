@@ -41,36 +41,12 @@
             <kind>1</kind>
             <string>/// player 2 stats
 playerID = 1;
+playerSlot = 2;
 sprite[facing.right] = spr_player2_right;
 sprite[facing.up] = spr_player2_up;
 sprite[facing.left] = spr_player2_left;
 sprite[facing.down] = spr_player2_down;
 spritedir = facing.down;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_crown">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>
-var test = 0;
-
 </string>
           </argument>
         </arguments>

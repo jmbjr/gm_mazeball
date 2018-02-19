@@ -3,7 +3,9 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <NewExtensions/>
+  <NewExtensions>
+    <extension index="0">extensions\Input Dog</extension>
+  </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="players">
@@ -46,6 +48,13 @@
         <sprite>sprites\spr_crown</sprite>
       </sprites>
       <sprite>sprites\spr_icecube</sprite>
+    </sprites>
+    <sprites name="inputdog">
+      <sprite>sprites\sDogBark</sprite>
+      <sprite>sprites\sDogGrowl</sprite>
+      <sprite>sprites\sDogIdle</sprite>
+      <sprite>sprites\sFatButton</sprite>
+      <sprite>sprites\sThinButton</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -108,9 +117,52 @@
       <script>scripts\effect_fast.gml</script>
     </scripts>
     <script>scripts\set_next_season.gml</script>
+    <scripts name="inputdog">
+      <scripts name="_Custom Controls">
+        <script>scripts\inputdog_get_custom_controls_file.gml</script>
+        <script>scripts\inputdog_get_gamepad_input_down.gml</script>
+        <script>scripts\inputdog_load_custom_controls.gml</script>
+        <script>scripts\inputdog_load_default_gamepad_mapping.gml</script>
+        <script>scripts\inputdog_load_default_keyboard_mapping.gml</script>
+        <script>scripts\inputdog_save_custom_controls.gml</script>
+      </scripts>
+      <scripts name="_Input Manager">
+        <scripts name="_Replays">
+          <script>scripts\inputdog_replay_file_load.gml</script>
+          <script>scripts\inputdog_replay_file_save.gml</script>
+          <script>scripts\inputdog_replay_get_input_string.gml</script>
+          <script>scripts\inputdog_replay_start_playing.gml</script>
+          <script>scripts\inputdog_replay_start_recording.gml</script>
+          <script>scripts\inputdog_replay_stop_playing.gml</script>
+          <script>scripts\inputdog_replay_stop_recording.gml</script>
+        </scripts>
+        <script>scripts\inputdog_add_input.gml</script>
+        <script>scripts\inputdog_check_gamepad_input.gml</script>
+        <script>scripts\inputdog_find_empty_gamepad_slot.gml</script>
+        <script>scripts\inputdog_find_empty_joystick_slot.gml</script>
+        <script>scripts\inputdog_find_inputmanager_child_by_player.gml</script>
+        <script>scripts\inputdog_find_inputmanager_child_by_gamepad.gml</script>
+        <script>scripts\inputdog_get_gamepad_string.gml</script>
+        <script>scripts\inputdog_get_keyboard_string.gml</script>
+        <script>scripts\inputdog_is_slot_in_use.gml</script>
+        <script>scripts\inputdog_keyboard_check_direct.gml</script>
+        <script>scripts\inputdog_search_for_gamepads.gml</script>
+        <script>scripts\inputdog_search_for_joysticks.gml</script>
+        <script>scripts\inputdog_tween.gml</script>
+      </scripts>
+      <script>scripts\inputdog_analog.gml</script>
+      <script>scripts\inputdog_direction.gml</script>
+      <script>scripts\inputdog_down.gml</script>
+      <script>scripts\inputdog_pressed.gml</script>
+      <script>scripts\inputdog_released.gml</script>
+      <script>scripts\inputdog_set_rumble.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_basic</font>
+    <fonts name="inputdog">
+      <font>fonts\fButton</font>
+    </fonts>
   </fonts>
   <objects name="objects">
     <objects name="game">
@@ -164,10 +216,36 @@
       <object>objects\par_tiletype</object>
       <object>objects\obj_tiletype_under</object>
     </objects>
+    <objects name="inputdog">
+      <objects name="ClickableButtons">
+        <object>objects\ButtonParent</object>
+        <object>objects\GoToExampleRoom</object>
+        <object>objects\GoToInputRemapRoom</object>
+        <object>objects\LoadDefaultInputs</object>
+        <object>objects\SaveInputMapping</object>
+        <object>objects\SetInput</object>
+        <object>objects\StartStopRecording</object>
+        <object>objects\ToggleDirectInput</object>
+      </objects>
+      <objects name="ExampleRoom">
+        <object>objects\ExampleDog</object>
+      </objects>
+      <object>objects\InputForPlayer1</object>
+      <object>objects\InputForPlayer2</object>
+      <object>objects\InputForPlayer3</object>
+      <object>objects\InputForPlayer4</object>
+      <object>objects\InputManager</object>
+      <object>objects\InputRemappingManager</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\_init_display</room>
+    <room>rooms\rInitInputManager</room>
     <room>rooms\rm_start</room>
+    <rooms name="inputdog">
+      <room>rooms\rExampleRoom</room>
+      <room>rooms\rExampleInputRemapping</room>
+    </rooms>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

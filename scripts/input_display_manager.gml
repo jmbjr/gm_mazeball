@@ -7,7 +7,7 @@ if (keyboard_check_pressed(ord("Z")))
 }
 
 // toggle GUI stats to show in the view
-if (keyboard_check_pressed(ord("V")))
+if (keyboard_check_pressed(ord("I")))
 {
     switch(obj_display_manager.selected_view)
     {
@@ -30,7 +30,7 @@ if (keyboard_check_pressed(ord("V")))
 }
 
 // handle drawing GUI HUD
-if (keyboard_check_pressed(ord("G")))
+if inputdog_pressed("toggle_hud_help")
 {
     if (draw_gui)
         draw_gui = false;

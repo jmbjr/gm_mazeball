@@ -7,16 +7,13 @@
 // keys are checked here, but buttons in scr_get_input
 // BE CONSISTENT!
 
-if (change_view_key)
+if inputdog_pressed("change_view_follow", playerSlot)
     obj_camera_full.target_playerID = get_next_playerID(obj_camera_full.target_playerID);      
 
-if ((keyboard_check_pressed(ord("Y")) && playerID == 0) ||
-    (keyboard_check_pressed(ord("U")) && playerID == 1) ||
-    (keyboard_check_pressed(ord("I")) && playerID == 2) ||
-    (keyboard_check_pressed(ord("O")) && playerID == 3))
+if inputdog_pressed("toggle_player_visibility", playerSlot)
     toggle_player_visibility(playerID);
                 
-if (test_view_key)
+if inputdog_pressed("switch_view", playerSlot)
 {
     if (global.screenmode = screen.split)
         global.screenmode = screen.single;    
@@ -26,7 +23,7 @@ if (test_view_key)
     global.screenmode_changed = true;
 }
 /// toggle help
-if (keyboard_check_pressed(ord("H")))
+if inputdog_pressed("toggle_help", playerSlot)
 {
     if (show_help)
         show_help = false;
@@ -35,7 +32,7 @@ if (keyboard_check_pressed(ord("H")))
 }
     
 // draw BBOXES
-if (keyboard_check_pressed(ord("P")))
+if inputdog_pressed("toggle_hud_help", playerSlot)
 {
     if (draw_bbox)
         draw_bbox = false;
@@ -43,16 +40,16 @@ if (keyboard_check_pressed(ord("P")))
         draw_bbox = true;
 }
 
-if (keyboard_check_pressed(ord("R")))
+if inputdog_pressed("restart_game", playerSlot)
     game_restart();
 
 
-if (keyboard_check_pressed(vk_escape))
+if inputdog_pressed("exit_game", playerSlot)
     game_end();
 
 
 // NOW CHECK FOR NEW STATES 
-if (dash_key)
+if inputdog_pressed("dash", playerSlot)
 {
     current_state = state.dash;
     dur_dash = dur_dash_max; 
@@ -62,7 +59,7 @@ if (dash_key)
 }
 
 // test status effect
-if (fast_key)
+if inputdog_pressed("haste", playerSlot)
     effect_fast(global.player[playerID]);
 
     

@@ -6,10 +6,8 @@ var _move_speed = argument[1];
 _move_speed *= speed_multiplier;
 
 with (_player)
-{
-    dir = point_direction(0, 0, xaxis, yaxis);
-    
-    if (xaxis == 0 && yaxis == 0) 
+{    
+    if (dir == -1) 
     {
         hspd = 0;
         vspd = 0;
@@ -19,8 +17,11 @@ with (_player)
     else
     {
         // actually moving
-        hspd = lengthdir_x(_move_speed, dir);
-        vspd = lengthdir_y(_move_speed, dir);
+        var _s = point_distance(0,0, -inputdog_analog("left",playerSlot)+inputdog_analog("right",playerSlot),
+                                -inputdog_analog("up",playerSlot)+inputdog_analog("down",playerSlot))
+        
+        hspd = lengthdir_x(_move_speed * _s, dir);
+        vspd = lengthdir_y(_move_speed * _s, dir);
         image_speed = animation_speed;
         if (image_index == 0) image_index = 1;
     }

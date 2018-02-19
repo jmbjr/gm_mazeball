@@ -32,10 +32,8 @@ current_state = state.idle;
 
 hspd = 0;
 vspd = 0;
-xaxis = 0;
-yaxis = 0;
 len = 0;
-dir = 0;
+dir = -1;
 animation_speed = 0.2;
 image_speed = 0;
 
