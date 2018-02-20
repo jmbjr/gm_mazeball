@@ -28,10 +28,10 @@
             <string>/// ds_grid for tiles
 enum tiletype{empty, solid};
 enum tiledepth{under=-20, solid=-5, player=-10, shadow=0};
+var _t = global.cell_size;
 
-cell_size = 16;
-width = room_width / cell_size;
-height = room_height / cell_size;
+width = room_width / _t;
+height = room_height / _t;
 
 grid = ds_grid_create(width, height);
 global.grid_refresh = true;
@@ -59,6 +59,7 @@ global.grid_refresh = true;
           <argument>
             <kind>1</kind>
             <string>/// update grid
+var _t = global.cell_size;
 
 if (global.grid_refresh)
 {
@@ -68,7 +69,7 @@ if (global.grid_refresh)
     {
         for (var jj=0; jj&lt;height; jj++)
         {
-            if (tile_layer_find(tiledepth.solid,ii*cell_size, jj*cell_size))
+            if (tile_layer_find(tiledepth.solid,ii*_t, jj*_t))
                 ds_grid_set(grid, ii, jj, tiletype.solid);
         }
     }

@@ -14,7 +14,7 @@ var _x = argument[0],
     _y = argument[1],
     _tileType = argument[2],
     _g = obj_grid.grid;       // grab local grid handle for performance boost - not neccesary when a global var. Shown here for consistency reasons.
-    _t = obj_grid.cell_size;
+    _t = global.cell_size;
     
 // === determine coords === //
 var _xp = x, // save previous position
