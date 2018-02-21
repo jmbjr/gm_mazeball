@@ -81,6 +81,7 @@
       <script>scripts\init_player.gml</script>
       <script>scripts\init_globals.gml</script>
       <script>scripts\init_grid.gml</script>
+      <script>scripts\init_menu.gml</script>
     </scripts>
     <scripts name="display">
       <script>scripts\scr_set_bkg.gml</script>
@@ -156,6 +157,15 @@
       <script>scripts\inputdog_pressed.gml</script>
       <script>scripts\inputdog_released.gml</script>
       <script>scripts\inputdog_set_rumble.gml</script>
+    </scripts>
+    <scripts name="menu">
+      <script>scripts\create_menu_page.gml</script>
+      <script>scripts\resume_game.gml</script>
+      <script>scripts\exit_game.gml</script>
+      <script>scripts\change_volume.gml</script>
+      <script>scripts\change_difficulty.gml</script>
+      <script>scripts\change_resolution.gml</script>
+      <script>scripts\chnage_window_mode.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -235,6 +245,9 @@
       <object>objects\InputForPlayer4</object>
       <object>objects\InputManager</object>
       <object>objects\InputRemappingManager</object>
+    </objects>
+    <objects name="menu">
+      <object>objects\obj_menu</object>
     </objects>
   </objects>
   <rooms name="rooms">
