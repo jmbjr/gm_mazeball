@@ -31,48 +31,48 @@ display_set_gui_size(global.view_width, global.view_height);
 
 // create menu pages
 ds_menu_main = create_menu_page(
-    ["RESUME",      menu_element_type.script_runner,    resume_game],
-    ["SETTINGS",    menu_element_type.page_transfer,    menu_page.settings],
-    ["EXIT",        menu_element_type.script_runner,    exit_game]
+    array("RESUME",      menu_element_type.script_runner,    resume_game),
+    array("SETTINGS",    menu_element_type.page_transfer,    menu_page.settings),
+    array("EXIT",        menu_element_type.script_runner,    exit_game)
 );
 
 ds_settings = create_menu_page(
-    ["AUDIO",       menu_element_type.page_transfer,    menu_page.audio],
-    ["DIFFICULTY",  menu_element_type.page_transfer,    menu_page.difficulty],
-    ["GRAPHICS",    menu_element_type.page_transfer,    menu_page.graphics],
-    ["CONTROLS",    menu_element_type.page_transfer,    menu_page.controls],
-    ["BACK",        menu_element_type.page_transfer,    menu_page.main],
+    array("AUDIO",       menu_element_type.page_transfer,    menu_page.audio),
+    array("DIFFICULTY",  menu_element_type.page_transfer,    menu_page.difficulty),
+    array("GRAPHICS",    menu_element_type.page_transfer,    menu_page.graphics),
+    array("CONTROLS",    menu_element_type.page_transfer,    menu_page.controls),
+    array("BACK",        menu_element_type.page_transfer,    menu_page.main)
 );
 
 ds_menu_audio = create_menu_page(
-    ["MASTER",      menu_element_type.slider,           change_volume,  1,  [0,1]],
-    ["SOUNDS",      menu_element_type.slider,           change_volume,  1,  [0,1]],
-    ["MUSIC",       menu_element_type.slider,           change_volume,  1,  [0,1]],
-    ["BACL",        menu_element_type.page_transfer,    menu_page.settings],
+    array("MASTER",      menu_element_type.slider,           change_volume,  1,  array(0,1)),
+    array("SOUNDS",      menu_element_type.slider,           change_volume,  1,  array(0,1)),
+    array("MUSIC",       menu_element_type.slider,           change_volume,  1,  array(0,1)),
+    array("BACL",        menu_element_type.page_transfer,    menu_page.settings)
 );
 
 ds_menu_difficulty = create_menu_page(
-    ["ENEMIES",     menu_element_type.shift,            change_difficulty,  0,  ["HARMLESS", "NORMAL", "KILLER"]],
-    ["ALLIES",      menu_element_type.shift,            change_difficulty,  0,  ["DUMB", "NORMAL", "GENIUS"]],
-    ["BACK",        menu_element_type.page_transfer,    menu_page.settings],   
+    array("ENEMIES",     menu_element_type.shift,            change_difficulty,  0,  array("HARMLESS", "NORMAL", "KILLER")),
+    array("ALLIES",      menu_element_type.shift,            change_difficulty,  0,  array("DUMB", "NORMAL", "GENIUS")),
+    array("BACK",        menu_element_type.page_transfer,    menu_page.settings),   
 );
 
 ds_menu_graphics = create_menu_page(
-    ["RESOLUTION",  menu_element_type.shift,            change_difficulty,  0,  ["384 x 216", "768 x 432", "1152 x 648"]],
-    ["WINDOW MODE", menu_element_type.toggle,           change_difficulty,  0,  ["FULLSCREEN", "WINDOWED"]],
-    ["BACK",        menu_element_type.page_transfer,    menu_page.settings],  
+    array("RESOLUTION",  menu_element_type.shift,            change_difficulty,  0,  array("384 x 216", "768 x 432", "1152 x 648")),
+    array("WINDOW MODE", menu_element_type.toggle,           change_difficulty,  0,  array("FULLSCREEN", "WINDOWED")),
+    array("BACK",        menu_element_type.page_transfer,    menu_page.settings)
 );
 
 ds_menu_controls = create_menu_page(
-    ["UP",          menu_element_type.input,            "key_up",       vk_up],
-    ["LEFT",        menu_element_type.input,            "key_left",     vk_left],
-    ["RIGHT",       menu_element_type.input,            "key_right",    vk_right],
-    ["DOWN",        menu_element_type.input,            "key_down",     vk_down],
-    ["BACK",        menu_element_type.page_transfer,    menu_page.settings], 
+    array("UP",          menu_element_type.input,            "key_up",       vk_up),
+    array("LEFT",        menu_element_type.input,            "key_left",     vk_left),
+    array("RIGHT",       menu_element_type.input,            "key_right",    vk_right),
+    array("DOWN",        menu_element_type.input,            "key_down",     vk_down),
+    array("BACK",        menu_element_type.page_transfer,    menu_page.settings) 
 );
 
 page = 0;
-menu_pages = [ds_menu_main, ds_settings, ds_menu_audio, ds_menu_difficulty, ds_menu_graphics, ds_menu_controls];
+menu_pages = array(ds_menu_main, ds_settings, ds_menu_audio, ds_menu_difficulty, ds_menu_graphics, ds_menu_controls);
 var i = 0, array_len = array_length_1d(menu_pages);
 repeat(array_len)
 {

@@ -13,7 +13,8 @@
   <code>/// create event for the room
 
 // run globals script
-init_globals();</code>
+init_globals();
+init_menu();</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
