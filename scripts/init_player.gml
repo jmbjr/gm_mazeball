@@ -25,7 +25,7 @@ crowned = 0;
 
 view_zoom = 1;
 view_max_zoom = 10;
-show_help = true;
+show_help = false;
 draw_bbox = false;
 
 current_state = state.idle;

@@ -109,6 +109,7 @@ if (global.screenmode_changed)
           <argument>
             <kind>1</kind>
             <string>/// draw GUI stuff for split screen modes
+if (global.pause) exit;
 
 if (global.screenmode == screen.split)
 {

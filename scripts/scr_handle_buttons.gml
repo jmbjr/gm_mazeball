@@ -6,6 +6,7 @@
 // ALSO MAKE UP YOUR MIND ON WHERE TO CHECK BUTTONS AND KEYS
 // keys are checked here, but buttons in scr_get_input
 // BE CONSISTENT!
+if (global.pause) exit;
 
 if inputdog_pressed("change_view_follow", playerSlot)
     obj_camera_full.target_playerID = get_next_playerID(obj_camera_full.target_playerID);      

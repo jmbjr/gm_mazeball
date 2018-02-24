@@ -166,7 +166,7 @@
       <script>scripts\change_volume.gml</script>
       <script>scripts\change_difficulty.gml</script>
       <script>scripts\change_resolution.gml</script>
-      <script>scripts\chnage_window_mode.gml</script>
+      <script>scripts\change_window_mode.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
