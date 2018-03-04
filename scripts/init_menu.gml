@@ -12,11 +12,11 @@ global.key_right    = vk_right;
 global.key_up       = vk_up;
 global.key_down     = vk_down;
 
+//    difficulty,
 enum menu_page {
     main,
     settings,
     audio,
-    difficulty,
     graphics,
     controls,
     count
@@ -31,5 +31,4 @@ enum menu_element_type {
     input,
     count
 }
-
 

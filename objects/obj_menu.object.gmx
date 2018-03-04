@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>/// set up menu
+justpaused = 0;
 
 display_set_gui_size(global.view_width, global.view_height);
 
@@ -36,9 +37,9 @@ ds_menu_main = create_menu_page(
     array("EXIT",        menu_element_type.script_runner,    exit_game)
 );
 
+    //array("DIFFICULTY",  menu_element_type.page_transfer,    menu_page.difficulty),
 ds_settings = create_menu_page(
     array("AUDIO",       menu_element_type.page_transfer,    menu_page.audio),
-    array("DIFFICULTY",  menu_element_type.page_transfer,    menu_page.difficulty),
     array("GRAPHICS",    menu_element_type.page_transfer,    menu_page.graphics),
     array("CONTROLS",    menu_element_type.page_transfer,    menu_page.controls),
     array("BACK",        menu_element_type.page_transfer,    menu_page.main)
@@ -58,8 +59,8 @@ ds_menu_difficulty = create_menu_page(
 );
 
 ds_menu_graphics = create_menu_page(
-    array("RESOLUTION",  menu_element_type.shift,            change_difficulty,  0,  array("384 x 216", "768 x 432", "1152 x 648")),
-    array("WINDOW MODE", menu_element_type.toggle,           change_difficulty,  0,  array("FULLSCREEN", "WINDOWED")),
+    array("RESOLUTION",  menu_element_type.shift,            change_resolution,  0,  array("1x", "2x", "3x")),
+    array("WINDOW MODE", menu_element_type.toggle,           change_window_mode,  0,  array("FULLSCREEN", "WINDOWED")),
     array("BACK",        menu_element_type.page_transfer,    menu_page.settings)
 );
 
@@ -72,7 +73,11 @@ ds_menu_controls = create_menu_page(
 );
 
 page = 0;
-menu_pages = array(ds_menu_main, ds_settings, ds_menu_audio, ds_menu_difficulty, ds_menu_graphics, ds_menu_controls);
+
+//remove difficulty for now
+// menu_pages = array(ds_menu_main, ds_settings, ds_menu_audio, ds_menu_difficulty, ds_menu_graphics, ds_menu_controls);
+menu_pages = array(ds_menu_main, ds_settings, ds_menu_audio, ds_menu_graphics, ds_menu_controls);
+
 var i = 0, array_len = array_length_1d(menu_pages);
 repeat(array_len)
 {
@@ -137,6 +142,8 @@ repeat(array_len)
           <argument>
             <kind>1</kind>
             <string>/// handle inputs
+justpaused--;  //probably silly to do it this way.
+
 if (!global.pause) exit;
 
 input_up_p      = keyboard_check_pressed(global.key_up);
@@ -159,6 +166,7 @@ if (inputting) {
     break;
         
     case menu_element_type.slider:
+
         var hinput = keyboard_check(global.key_right) - keyboard_check(global.key_left);
         if (hinput != 0) {
             ds_grid[# 3, menu_option[page]] += hinput*0.01;

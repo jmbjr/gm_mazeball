@@ -4,6 +4,7 @@ if (global.pause) exit;
 // change view setting
 if (keyboard_check_pressed(ord("Z")))
 {
+    zoom++;
     scr_zoom();
 }
 
