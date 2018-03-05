@@ -12,7 +12,7 @@ dur_dash = 0;
 cd_rate_dash = 5;
 
 //frozen
-dur_frozen_max = room_speed*8;
+dur_frozen_max = room_speed*40;
 dur_frozen = 0;
 cd_rate_frozen = 5;
 

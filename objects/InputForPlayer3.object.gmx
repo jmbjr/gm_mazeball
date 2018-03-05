@@ -42,6 +42,7 @@ inputdog_add_input("exit_game", vk_escape, -1);
 inputdog_add_input("dash", vk_space, gp_face1);
 inputdog_add_input("haste", vk_shift, gp_shoulderrb);
 inputdog_add_input("main_menu", vk_enter, gp_start);
+inputdog_add_input("thaw_faster", -1, gp_face1);
 
 </string>
           </argument>
