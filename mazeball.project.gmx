@@ -76,11 +76,13 @@
       <script>scripts\get_next_playerID.gml</script>
       <script>scripts\sync_objects.gml</script>
       <script>scripts\get_safe_random_location.gml</script>
+      <script>scripts\array.gml</script>
     </scripts>
     <scripts name="init">
       <script>scripts\init_player.gml</script>
       <script>scripts\init_globals.gml</script>
       <script>scripts\init_grid.gml</script>
+      <script>scripts\init_menu.gml</script>
     </scripts>
     <scripts name="display">
       <script>scripts\scr_set_bkg.gml</script>
@@ -157,6 +159,15 @@
       <script>scripts\inputdog_released.gml</script>
       <script>scripts\inputdog_set_rumble.gml</script>
     </scripts>
+    <scripts name="menu">
+      <script>scripts\create_menu_page.gml</script>
+      <script>scripts\resume_game.gml</script>
+      <script>scripts\exit_game.gml</script>
+      <script>scripts\change_volume.gml</script>
+      <script>scripts\change_difficulty.gml</script>
+      <script>scripts\change_resolution.gml</script>
+      <script>scripts\change_window_mode.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_basic</font>
@@ -174,7 +185,6 @@
       <object>objects\obj_camera3</object>
       <object>objects\obj_camera4</object>
       <object>objects\obj_display_manager</object>
-      <object>objects\obj_global</object>
       <object>objects\obj_grid</object>
       <object>objects\obj_player_manager</object>
       <object>objects\obj_weather_manager</object>
@@ -236,6 +246,9 @@
       <object>objects\InputForPlayer4</object>
       <object>objects\InputManager</object>
       <object>objects\InputRemappingManager</object>
+    </objects>
+    <objects name="menu">
+      <object>objects\obj_menu</object>
     </objects>
   </objects>
   <rooms name="rooms">

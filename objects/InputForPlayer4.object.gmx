@@ -35,12 +35,13 @@ inputdog_add_input("growl",  vk_numpad9,   gp_face1);
 inputdog_add_input("change_view_follow", ord("F"), gp_shoulderr);
 inputdog_add_input("switch_view", ord("V"), gp_shoulderl);
 inputdog_add_input("toggle_player_visibility", ord("O"), gp_shoulderlb);
-inputdog_add_input("toggle_help", ord("H"), gp_start);
-inputdog_add_input("toggle_hud_help", ord("G"), gp_select);
-inputdog_add_input("restart_game", ord("R"), gp_stickl);
-inputdog_add_input("exit_game", vk_escape, gp_stickr);
+inputdog_add_input("toggle_help", ord("H"), -1);
+inputdog_add_input("toggle_hud_help", ord("G"), -1);
+inputdog_add_input("restart_game", ord("R"), -1);
+inputdog_add_input("exit_game", vk_escape, -1);
 inputdog_add_input("dash", vk_space, gp_face1);
 inputdog_add_input("haste", vk_shift, gp_shoulderrb);
+inputdog_add_input("main_menu", vk_enter, gp_start);
 
 </string>
           </argument>

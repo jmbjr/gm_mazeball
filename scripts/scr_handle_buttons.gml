@@ -6,7 +6,17 @@
 // ALSO MAKE UP YOUR MIND ON WHERE TO CHECK BUTTONS AND KEYS
 // keys are checked here, but buttons in scr_get_input
 // BE CONSISTENT!
+if (global.pause) exit;
 
+if inputdog_pressed("main_menu", playerSlot)
+{
+    show_debug_message("pause");
+    with (obj_menu)
+        justpaused = room_speed/10;
+        
+    global.pause = true;
+
+}
 if inputdog_pressed("change_view_follow", playerSlot)
     obj_camera_full.target_playerID = get_next_playerID(obj_camera_full.target_playerID);      
 
