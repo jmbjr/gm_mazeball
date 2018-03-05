@@ -20,9 +20,6 @@ dur_help = room_speed * 4;
 
 hastecharges = 0;
 
-//score
-crowned = 0;
-
 view_zoom = 1;
 view_max_zoom = 10;
 show_help = false;

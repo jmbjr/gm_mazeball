@@ -47,6 +47,39 @@ crown = 0;
         </arguments>
       </action>
     </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// clean up
+
+//when obj_it is destroyed, need to make the player drop the crown and move it
+var _c = instance_find(obj_crown, 0);
+var _rand_loc = get_safe_random_location(tiledepth.solid);
+
+_c.pickedup = false;
+_c.x = _rand_loc[0];
+_c.y = _rand_loc[1];
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -103,7 +136,7 @@ for (_iiplayer=0; _iiplayer&lt;global.maxplayers; _iiplayer++)
                 other.target_instance.x = _rand_loc[0];
                 other.target_instance.y = _rand_loc[1];
                 other.target_instance = _p;
-                _p.crowned ++; //maybe should be in obj_crown
+                other.dur = other.dur_max;
                 break;
             }
         }
