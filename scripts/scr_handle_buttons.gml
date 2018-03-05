@@ -59,7 +59,7 @@ if inputdog_pressed("exit_game", playerSlot)
 
 
 // NOW CHECK FOR NEW STATES 
-if inputdog_pressed("dash", playerSlot)
+if (inputdog_pressed("dash", playerSlot) && current_state != state.idle)
 {
     current_state = state.dash;
     dur_dash = dur_dash_max; 
