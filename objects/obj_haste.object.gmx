@@ -73,6 +73,9 @@ if (_p != noone &amp;&amp; _p.visible)
 {
     effect_fast(_p);
     _p.hastecharges += hastecharges;
+    if (_p.hastecharges&gt;_p.hastecharges_max)
+        _p.hastecharges = _p.hastecharges_max;
+        
     instance_destroy();
 }
 
