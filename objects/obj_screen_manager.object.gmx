@@ -121,7 +121,60 @@ if (global.screenmode == screen.split)
 
 }
 
+// loop through all players. for active ones, 
 
+var iiplayer = 0;
+var _x, _y;
+var haste_var = "Haste :";
+var _xspc = 2;
+var _yspc = 2;
+
+for (iiplayer = 0; iiplayer &lt; global.maxplayers; iiplayer++)
+{
+    if (global.player[iiplayer].visible) // draw HUD
+    {
+        //this doesn't handle variable split screens yet
+        switch (iiplayer) 
+        {
+            case 0:
+                _x = _xspc;
+                _y = _yspc;
+            break;
+            case 1:
+                _x = display_get_gui_width()/2 + _xspc;
+                _y = _yspc;
+            break;
+            case 2:
+                _x = _xspc;
+                _y = display_get_gui_height()/2 + _yspc;
+            break;
+            case 3:
+                _x = display_get_gui_width()/2 + _xspc;
+                _y = display_get_gui_height()/2 + _yspc;
+            break;
+        }
+    
+        draw_set_font(fnt_small);
+        draw_set_color(c_white);
+        draw_set_halign(fa_left);
+        draw_set_valign(fa_middle);  
+        draw_text(_x, _y, haste_var);
+        
+        var _h = global.player[iiplayer].hastecharges;
+        var iihaste;
+        var c = c_white;
+        var _tw = string_width(haste_var);
+        var _r = 3;
+        var _xoff = _r*2;
+        
+        if (_h &gt; 0)
+        {
+            for(iihaste=1; iihaste&lt;=_h; iihaste++)
+               draw_circle_color(_x + _tw + (_xoff * iihaste), _y, _r, c, c, false);
+        }
+                 
+    }
+}        
 </string>
           </argument>
         </arguments>

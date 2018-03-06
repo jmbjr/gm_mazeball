@@ -21,7 +21,7 @@ dur_help = room_speed * 4;
 haste_speed = room_speed * 10;
 cd_rate_haste = 5;
 hastecharges = 0;
-hastecharges_max = 10;
+hastecharges_max = 9;
 
 view_zoom = 1;
 view_max_zoom = 10;

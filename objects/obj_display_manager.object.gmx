@@ -166,8 +166,8 @@ draw_set_color(c_white);
 
 if (draw_gui)
 {
-    draw_set_valign(fa_left);
-    draw_set_halign(fa_top);
+    draw_set_halign(fa_left);
+    draw_set_valign(fa_top);
     draw_text(5, 5,display_write_specs(selected_view));
     draw_text(5, 20, string(instance_count));
     draw_text(5, 35, script_get_name(obj_player1.current_state));

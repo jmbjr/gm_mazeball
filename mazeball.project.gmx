@@ -171,6 +171,7 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_basic</font>
+    <font>fonts\fnt_small</font>
     <fonts name="inputdog">
       <font>fonts\fButton</font>
     </fonts>
