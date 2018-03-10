@@ -51,7 +51,21 @@ if inputdog_pressed("toggle_hud_help", playerSlot)
 }
 
 if inputdog_pressed("restart_game", playerSlot)
-    game_restart();
+{
+global.rm++;
+if (global.rm > global.maxrooms)
+    global.rm = 0;
+    
+switch (global.rm)
+    {
+    case 0: room_goto(rm_start); break;
+    case 1: room_goto(rm_mazey); break;
+    }
+    
+    global.grid_refresh = true; //trigger refreshing grid
+    global.reset_players = true;   
+}
+    //game_restart();
 
 
 if inputdog_pressed("exit_game", playerSlot)

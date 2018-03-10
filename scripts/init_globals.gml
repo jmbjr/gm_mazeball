@@ -56,5 +56,7 @@ global.screenmode_changed = false;
 global.splitrows = 0; //how many rows for split screen
 global.splitcols = 0; //how many rows for split screen
 
-
-
+//rooms
+global.rm = 0;
+global.maxrooms = 1;
+global.reset_players = false;

@@ -256,6 +256,7 @@
     <room>rooms\_init_display</room>
     <room>rooms\rInitInputManager</room>
     <room>rooms\rm_start</room>
+    <room>rooms\rm_mazey</room>
     <rooms name="inputdog">
       <room>rooms\rExampleRoom</room>
       <room>rooms\rExampleInputRemapping</room>

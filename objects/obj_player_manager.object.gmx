@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>-99</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -28,6 +28,22 @@
             <string>/// check to see if players are active. if not, disable them
 
 var iiplayer = 0;
+
+if (global.reset_players)
+{
+    // put at safe locations
+    for (iiplayer = 0; iiplayer &lt; global.maxplayers; iiplayer++)
+    {
+        if (global.player[iiplayer].visible)
+        {
+            _rand_loc = get_safe_random_location(tiledepth.solid);
+            
+            global.player[iiplayer].x = _rand_loc[0];
+            global.player[iiplayer].y = _rand_loc[1]; 
+        }   
+    } 
+    global.reset_players = false;
+}
 
 for (iiplayer = 0; iiplayer &lt; global.maxplayers; iiplayer++)
 {
