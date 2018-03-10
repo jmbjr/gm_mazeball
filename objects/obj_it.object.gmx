@@ -141,6 +141,9 @@ for (_iiplayer=0; _iiplayer&lt;global.maxplayers; _iiplayer++)
             }
         }
     }
+    else //the player who is IT
+        other.target_instance.points ++;
+    
 }
 
 </string>

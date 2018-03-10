@@ -18,10 +18,14 @@ cd_rate_frozen = 5;
 
 dur_help = room_speed * 4;
 
+//haste
 haste_speed = room_speed * 10;
 cd_rate_haste = 5;
 hastecharges = 0;
 hastecharges_max = 9;
+
+// score
+points=0;
 
 view_zoom = 1;
 view_max_zoom = 10;
