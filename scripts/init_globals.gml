@@ -60,3 +60,15 @@ global.splitcols = 0; //how many rows for split screen
 global.rm = 0;
 global.maxrooms = 2;
 global.reset_players = false;
+
+//defaults
+global.scale_default = 1;
+global.speed_default = 2;
+
+//big
+global.scale_big = 1.4;
+global.speed_big = 0.80;
+
+//it
+global.dur_it = room_speed * 100;
+

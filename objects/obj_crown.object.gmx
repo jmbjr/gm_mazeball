@@ -29,17 +29,32 @@
 if (!pickedup)
 {
     var _p;
+    var _dur = global.dur_it;
+    
     _p = instance_place(x, y, par_player);
     if (_p != noone &amp;&amp; _p.visible)
     {
+        var  _big = instance_create(0,0,obj_effect_big);
+        with (_big)
+        {
+            target_instance = _p;
+            dur = _dur;
+            dur_max = _dur; 
+            cd_rate = 0;               
+        }
+    
         with (instance_create(x, y, obj_it))
         {
-            dur_max = room_speed * 50;
+            dur_max = _dur;
             dur= dur_max;
             cd_rate = 5;
             target_instance = _p;
             crown = other;
+            big = _big;
         }
+        
+        image_xscale = global.scale_big;
+        image_yscale = global.scale_big;
         pickedup = true;
     }
 }

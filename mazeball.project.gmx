@@ -213,6 +213,7 @@
         <object>objects\obj_effect_fast</object>
         <object>objects\obj_smoke</object>
         <object>objects\obj_it</object>
+        <object>objects\obj_effect_big</object>
       </objects>
       <objects name="items">
         <object>objects\par_item</object>

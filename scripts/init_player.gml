@@ -1,8 +1,10 @@
 /// init_player
 
 /// create
-walking_speed = 2;
+walking_speed = global.speed_default;
 speed_multiplier = 1; 
+image_xscale = global.scale_default;
+image_yscale = global.scale_default;
 
 //I think I need a proper data structure for these states
 //dash
