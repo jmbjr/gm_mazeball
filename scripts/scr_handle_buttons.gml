@@ -60,6 +60,7 @@ switch (global.rm)
     {
     case 0: room_goto(rm_start); break;
     case 1: room_goto(rm_mazey); break;
+    case 2: room_goto(rm_arena); break;
     }
     
     global.grid_refresh = true; //trigger refreshing grid

@@ -58,5 +58,5 @@ global.splitcols = 0; //how many rows for split screen
 
 //rooms
 global.rm = 0;
-global.maxrooms = 1;
+global.maxrooms = 2;
 global.reset_players = false;
