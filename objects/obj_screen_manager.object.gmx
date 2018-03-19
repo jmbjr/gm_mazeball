@@ -147,11 +147,11 @@ for (iiplayer = 0; iiplayer &lt; global.maxplayers; iiplayer++)
             break;
             case 2:
                 _x = _xspc;
-                _y = display_get_gui_height()/2 + _yspc;
+                _y = display_get_gui_height()/global.splitrows + _yspc;
             break;
             case 3:
                 _x = display_get_gui_width()/2 + _xspc;
-                _y = display_get_gui_height()/2 + _yspc;
+                _y = display_get_gui_height()/global.splitrows + _yspc;
             break;
         }
     

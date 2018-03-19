@@ -132,9 +132,9 @@ for (_iiplayer=0; _iiplayer&lt;global.maxplayers; _iiplayer++)
             if (_c != noone) //the crown is here, _p takes it and becomes 'it' and pushes 
             {
                 _rand_loc = get_safe_random_location(tiledepth.solid);
-                
-                other.target_instance.x = _rand_loc[0];
-                other.target_instance.y = _rand_loc[1];
+                _p.points+=100;
+                _p.x = _rand_loc[0];
+                _p.y = _rand_loc[1];
                 other.target_instance = _p;
                 other.dur = other.dur_max;
                 break;
@@ -142,7 +142,7 @@ for (_iiplayer=0; _iiplayer&lt;global.maxplayers; _iiplayer++)
         }
     }
     else //the player who is IT
-        other.target_instance.points ++;
+        other.target_instance.points++;
     
 }
 
